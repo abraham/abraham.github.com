@@ -51,6 +51,7 @@ td {
 iframe.twitter-share-button.twitter-count-horizontal {
 	position: relative;
 	top: 7px;
+	width: 100px;
 }
 
 * {
