@@ -43,6 +43,7 @@ td {
 #share {
 	margin-top: 40px;
 	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .center {
@@ -52,6 +53,7 @@ td {
 iframe.twitter-share-button.twitter-count-horizontal {
 	position: relative;
 	top: 7px;
+	width: 105px !important;
 }
 
 * {
