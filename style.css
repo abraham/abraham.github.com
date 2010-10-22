@@ -31,6 +31,11 @@ th {
 	top: 1px;
 }
 
+.fb_share_count_nub_right {
+  position: relative;
+  top: 8px;
+}
+
 td {
 	padding: 2px;
 	padding-left: 10px;
