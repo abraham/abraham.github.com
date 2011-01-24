@@ -1,5 +1,5 @@
 /* your main wrapping div */
-#wrapper{ margin: 0 auto; position:relative; overflow: hidden; width: 994px;background:#fff url(../images/sg_grid_sub.png) center top repeat; }
+#wrapper{ margin: 0 auto; position:relative; overflow: hidden; width: 994px;background:#fff; }
 #container{width:1008px; /* essential */ margin-left:-7px;}
 
 /* global styling to apply to all columns */
