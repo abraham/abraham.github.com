@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en' prefix="og: http://ogp.me/ns#">
+<html lang='en' prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Person">
 <head>
   <meta charset='utf-8'>
   <title>Abraham Williams</title>
@@ -14,6 +14,9 @@
     body {
       padding-top: 40px;
       padding-bottom: 60px;
+    }
+    .muted a {
+      color: #999;
     }
   </style>
   
@@ -51,20 +54,24 @@
 
   <div class="container">
     <div class="page-header">
-      <h1>Abraham Williams <span class="g-plusone" data-size="medium" data-href="https://abrah.am/"></span></h1>
-       <small class="lead muted">Gentle giant, pugnacious panda, and foundər of Addvocate</small>
+      <h1><span itemprop="name">Abraham Williams</span> <link class="g-plusone" data-size="medium" data-href="https://abrah.am/" href="https://abrah.am/" itemprop="url"></link></h1>
+       <small class="lead muted" itemprop="description">Gentle giant, pugnacious panda, and foundər of <a href="http://addvocate.com">Addvocate</a></small>
     </div>
 
     <div class="row">
       <div class="span5">
-        <img src="img/me-and-kiwi.jpg" class="img-rounded" alt="Black and white photo of Abraham holding the dog Kiwi">
+        <img src="img/me-and-kiwi.jpg" class="img-rounded" alt="Black and white photo of Abraham holding the dog Kiwi" itemprop="image" />
       </div>
       <div class="span7">
         <dl class="dl-horizontal">
           <dt>Title</dt>
-          <dd>Founder</dd>
+          <dd itemprop="jobTitle">Founder</dd>
           <dt>Company</dt>
-          <dd><a href="http://addvocate.com">Addvocate</a></dd>
+          <dd itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+            <a href="http://addvocate.com/" itemprop="url">
+              <span itemprop="name">Addvocate</span>
+            </a>
+          </dd>
           <dt>Google+</dt>
           <dd>+<a rel='me' href='https://plus.google.com/114233674199568482864?rel=author'>Abraham Williams</a></dd>
           <dt>App.net</dt>
@@ -88,9 +95,12 @@
           <dt>Blog</dt>
           <dd><a rel='me' href='http://blog.abrah.am/'>blog.abrah.am</a></dd>
           <dt>Location</dt>
-          <dd>San Francisco, CA</dd>
+          <dd itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="addressLocality">San Francisco</span>, <span itemprop="addressRegion">CA</span>
+            <link itemprop="url" href="https://en.wikipedia.org/wiki/San_Francisco" />
+          </dd>
           <dt>Email</dt>
-          <dd><a rel='me' href="mailto:abraham@abrah.am">abraham@abrah.am</a></dd>
+          <dd><a rel='me' href="mailto:abraham@abrah.am" itemprop="email">abraham@abrah.am</a></dd>
           <dt>Tags</dt>
           <dd>
             #<a href="https://plus.google.com/s/%23google" rel="tag">google</a>,
