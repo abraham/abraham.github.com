@@ -63,7 +63,7 @@
 
     <div class="row">
       <div class="span5">
-        <img src="/img/me-and-kiwi.jpg" class="img-rounded" alt="Black and white photo of Abraham holding the dog Kiwi" itemprop="image" />
+        <img src="img/me-and-kiwi.jpg" class="img-rounded" alt="Black and white photo of Abraham holding the dog Kiwi" itemprop="image" />
       </div>
       <div class="span7">
         <dl class="dl-horizontal">
@@ -97,7 +97,12 @@
           <dt>Instagram</dt>
           <dd>@<a rel='me' href='http://instagram.com/abrahamwilliams'>abrahamwilliams</a></dd>
           <dt>Blog</dt>
-          <dd><a rel='me' href='http://blog.abrah.am/'>blog.abrah.am</a></dd>
+          <dd itemscrope itemtype="http://schema.org/Blog">
+            <link itemprop="name" href="the.hackerConundrum" />
+            <link itemprop="url" href="http://blog.abrah.am/" />
+            <link itemprop="author" href="https://abrah.am/" />
+            <a rel='me' href='http://blog.abrah.am/'>blog.abrah.am</a>
+          </dd>
           <dt>Location</dt>
           <dd itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <span itemprop="addressLocality">San Francisco</span>, <span itemprop="addressRegion">CA</span>
