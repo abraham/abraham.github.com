@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+# 301 Redirect Old Files
+Redirect 301 /new.html /
+Redirect 301 /new /
+Redirect 301 /+ https://plus.google.com/114233674199568482864
+Redirect 301 /contact /
