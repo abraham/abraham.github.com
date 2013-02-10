@@ -149,7 +149,7 @@
       </blockquote>
       <blockquote class="span5">
         <p>So well done that it's almost transparent</p>
-        <small>Serge Keller's review of <a href="https://chrome.google.com/webstore/detail/hngjfhijhmcechdkbgopbgghajokogdi">Succynct</a> for App.net</small>
+        <small>Serge Keller's review of <a class="chrome-web-store" href="https://chrome.google.com/webstore/detail/hngjfhijhmcechdkbgopbgghajokogdi">Succynct</a> for App.net</small>
       </blockquote><div class='span1 pull-right'></div>
     </div>
     <br>
@@ -213,6 +213,12 @@
   <script src='./js/bootstrap.min.js'></script>
   <script>
     $('.carousel').carousel();
+    if (chrome && chrome.webstore && chrome.webstore.install) {
+      $('.chrome-web-store').on('click', function(event){
+        chrome.webstore.install('https://chrome.google.com/webstore/detail/hngjfhijhmcechdkbgopbgghajokogdi');
+        event.preventDefault();
+      });
+    }
   </script>
 </body>
 </html>
