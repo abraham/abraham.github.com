@@ -58,12 +58,47 @@
   <div class="container">
     <div class="page-header">
       <h1><span itemprop="name">Abraham Williams</span> <link class="g-plusone" data-size="medium" data-href="https://abrah.am/" href="https://abrah.am/" itemprop="url"></link></h1>
-       <small class="lead muted" itemprop="description">Gentle giant, pugnacious panda, and foundər of <a href="http://addvocate.com">Addvocate</a></small>
+       <small class="lead muted" itemprop="description">Gentle giant, pugnacious panda, and foundər of <a href="http://addvocate.com" data-toggle="tooltip" title="https://addvocate.com/">Addvocate</a></small>
     </div>
 
     <div class="row">
       <div class="span5">
-        <img src="img/me-and-kiwi.jpg" class="img-rounded" alt="Black and white photo of Abraham holding the dog Kiwi" itemprop="image" />
+        <div id="myCarousel" class="carousel slide">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+          </ol>
+          <!-- Carousel items -->
+          <div class="carousel-inner">
+            <div class="active item">
+              <img src="img/me-and-kiwi-380x380.png" class="img-rounded" alt="Black and white of Abraham holding the dog Kiwi Mac" itemprop="image" />
+            </div>
+            <div class="item">
+              <img src="img/glasses-380x380.png" class="img-rounded" alt="Abraham wearing cool shades" itemprop="image" />
+            </div>
+            <div class="item">
+              <img src="img/black-and-white-hawk-380x380.png" class="img-rounded" alt="Black and white of Abraham with a mohawk" itemprop="image" />
+            </div>
+            <div class="item">
+              <img src="img/google-io-halo-380x380.png" class="img-rounded" alt="Abraham at Google I/O 2012" itemprop="image" />
+            </div>
+            <div class="item">
+              <img src="img/matrix-380x380.png" class="img-rounded" alt="Abraham wearing Matrix shades" itemprop="image" />
+            </div>
+            <div class="item">
+              <img src="img/peace-380x380.png" class="img-rounded" alt="Abraham showing a peace sign" itemprop="image" />
+            </div>
+            <div class="item">
+              <img src="img/abraham-yellow-halo-380x380.png" class="img-rounded" alt="Abraham with a yellow meme background" itemprop="image" />
+            </div>
+          </div>
+        </div>
+        <!--<img src="img/me-and-kiwi.jpg" class="img-rounded" alt="Black and white photo of Abraham holding the dog Kiwi" itemprop="image" />-->
       </div>
       <div class="span7">
         <dl class="dl-horizontal">
@@ -167,5 +202,10 @@
     js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&appId=120388212072";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src='./js/bootstrap.min.js'></script>
+  <script>
+    $('.carousel').carousel();
+  </script>
 </body>
 </html>
