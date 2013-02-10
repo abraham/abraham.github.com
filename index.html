@@ -36,22 +36,6 @@
   <meta name="fb:admins" property="fb:admins" content="500164608" />
   <meta name="fb:app_id" property="fb:app_id" content="120388212072" />
 
-  <!-- Google Analytics -->
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-2706568-4']);
-    _gaq.push(['_trackPageview']);
-    _gaq.push(['_trackPageLoadTime']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = 'https://ssl.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-  <!-- ADN Widgets: https://alpha.app.net/widgets -->
-  <script async src='https://adnwidgets.herokuapp.com/alpha.js'></script>
 </head>
 <body>
 
@@ -183,7 +167,25 @@
       </div>
     </div>
   </div>
-  
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2706568-4']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = 'https://ssl.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  <!-- ADN Widgets: https://alpha.app.net/widgets -->
+  <script async src='https://adnwidgets.herokuapp.com/alpha.js'></script>
+
+  <!-- Twitter Widgets -->
   <script>
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
   </script>
@@ -195,6 +197,8 @@
     })();
   </script>
   <div id="fb-root"></div>
+
+  <!-- Facebook Widgets -->
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -202,6 +206,8 @@
     js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&appId=120388212072";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- jQuery and Bootstrap for carousel -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <script src='./js/bootstrap.min.js'></script>
   <script>
