@@ -23,7 +23,7 @@ $('.carousel').carousel();
 
 
 // Trigger install of Chrome extension
-if (chrome && chrome.webstore && chrome.webstore.install) {
+if (typeof chrome === 'object' && typeof chrome.webstore === 'object' && typeof chrome.webstore.install === 'function') {
   $('.chrome-web-store').on('click', function(event){
     chrome.webstore.install('https://chrome.google.com/webstore/detail/hngjfhijhmcechdkbgopbgghajokogdi');
     event.preventDefault();
