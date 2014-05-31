@@ -20,8 +20,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
-    color: #333;
-    text-shadow: 1px 1px 1px #fff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #333;
 }
 
 
@@ -38,9 +38,9 @@ p {
 
 /* Links */
 a {
-    color: #333;
+    color: #fff;
     word-wrap: break-word;
-    text-shadow: 1px 1px 1px #fff;
+    text-shadow: 1px 1px 1px #333;
 
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
     -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
