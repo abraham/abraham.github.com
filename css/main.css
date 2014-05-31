@@ -1,5 +1,4 @@
 body {
-    background-color: #f2f2f2;
     font-family: 'EB Garamond', serif;
     font-weight: 300;
     font-size: 16px;
@@ -8,7 +7,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 
-    background: url("/img/lake-small.jpg") no-repeat center center fixed; 
+    background: #333 url("/img/lake-small.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
