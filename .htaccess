@@ -3,6 +3,10 @@ RewriteEngine On
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# use gzip versions
+RewriteCond %{HTTP:Accept-Encoding} gzip 
+RewriteCond %{REQUEST_FILENAME}.gz -f 
+RewriteRule ^(.*)$ $1.gz [L]
 
 # 301 Redirect Old Files
 Redirect 301 /new.html /
