@@ -18,14 +18,14 @@ _gaq.push(['_trackPageLoadTime']);
 })();
 
 
-// Bootstrap carousel
-$('.carousel').carousel();
-
 
 // Trigger install of Chrome extension
 if (typeof chrome === 'object' && typeof chrome.webstore === 'object' && typeof chrome.webstore.install === 'function') {
-  $('.chrome-web-store').on('click', function(event){
-    chrome.webstore.install('https://chrome.google.com/webstore/detail/hngjfhijhmcechdkbgopbgghajokogdi');
-    event.preventDefault();
-  });
+  var cwsItems = document.getElementsByClassName("chrome-web-store");
+  for (var i = 0; i < cwsItems.length; i++) {
+    cwsItems[i].addEventListener('click', function(event){
+      chrome.webstore.install(event.currentTarget.getAttribute('href'));
+      event.preventDefault();
+    });
+  }
 }
