@@ -22,3 +22,5 @@ Header set X-XSS-Protection "1; mode=block"
 # Content stuff
 header set X-UA-Compatible "IE=edge, chrome=1"
 AddDefaultCharset utf-8
+ExpiresActive On
+ExpiresDefault "access plus 1 week"
