@@ -1,8 +1,12 @@
 RewriteEngine On
 
-# Enforce SSL
+# Enforce SSL is now handled by cloudfront
 #RewriteCond %{HTTP:X-Forwarded-Proto} !=https
 #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect extra domains
+RewriteCond %{http_host} "!^abrah-am.nfshost.com" [nc]
+RewriteRule ^(.*)$ https://abrah.am/$1 [r=301,nc]
 
 # Use gzip versions
 RewriteCond %{HTTP:Accept-Encoding} gzip 
