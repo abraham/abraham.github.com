@@ -18,7 +18,6 @@ _gaq.push(['_trackPageLoadTime']);
 })();
 
 
-
 // Trigger install of Chrome extension
 if (typeof chrome === 'object' && typeof chrome.webstore === 'object' && typeof chrome.webstore.install === 'function') {
   var cwsItems = document.getElementsByClassName("chrome-web-store");
@@ -30,12 +29,16 @@ if (typeof chrome === 'object' && typeof chrome.webstore === 'object' && typeof 
   }
 }
 
-var imageObj = new Image();
-imageObj.src = '/img/lake-small.jpg';
-imageObj.onload= function() {
-  document.body.classList.add('body');
-}
 
 setTimeout(function() {
-  document.body.classList.remove('blur');
+    var imageObj = new Image();
+    imageObj.src = '/img/lake.jpg';
+    imageObj.onload= function() {
+      document.body.style.backgroundImage = "url('/img/lake.jpg')";
+    }
+}, 0);
+
+
+setTimeout(function() {
+    document.body.classList.remove('blur');
 }, 1000);
