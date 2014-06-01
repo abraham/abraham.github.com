@@ -29,3 +29,8 @@ if (typeof chrome === 'object' && typeof chrome.webstore === 'object' && typeof 
     });
   }
 }
+
+setTimeout(function() {
+  document.body.classList.remove('blur');
+  document.body.classList.add('body');
+}, 500);
