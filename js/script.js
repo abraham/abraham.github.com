@@ -39,6 +39,8 @@ setTimeout(function() {
 }, 0);
 
 
-setTimeout(function() {
-    document.body.classList.remove('blur');
-}, 750);
+document.addEventListener("DOMContentLoaded", function(event) {
+    setTimeout(function() {
+        document.body.classList.remove('blur');
+    }, 500);
+});
