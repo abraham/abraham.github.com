@@ -41,4 +41,4 @@ setTimeout(function() {
 
 setTimeout(function() {
     document.body.classList.remove('blur');
-}, 1000);
+}, 750);
