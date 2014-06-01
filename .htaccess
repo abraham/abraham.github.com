@@ -32,3 +32,4 @@ AddDefaultCharset utf-8
 ExpiresActive On
 ExpiresDefault "access plus 1 week"
 ExpiresByType image/jpeg "access plus 1 week"
+ExpiresByType image/x-icon "access plus 1 week"
