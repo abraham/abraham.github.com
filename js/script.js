@@ -30,7 +30,13 @@ if (typeof chrome === 'object' && typeof chrome.webstore === 'object' && typeof 
   }
 }
 
+var imageObj = new Image();
+imageObj.src = '/img/lake-small.jpg';
+imageObj.onload= function() {
+  console.log('loaded');
+  document.body.classList.add('body');
+}
+
 setTimeout(function() {
   document.body.classList.remove('blur');
-  document.body.classList.add('body');
 }, 500);
