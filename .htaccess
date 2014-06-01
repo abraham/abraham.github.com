@@ -1,14 +1,15 @@
-# enforce SSL
-#RewriteEngine On
+RewriteEngine On
+
+# Enforce SSL
 #RewriteCond %{HTTP:X-Forwarded-Proto} !=https
 #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# use gzip versions
+# Use gzip versions
 RewriteCond %{HTTP:Accept-Encoding} gzip 
 RewriteCond %{REQUEST_FILENAME}.gz -f 
 RewriteRule ^(.*)$ $1.gz [L]
 
-# 301 Redirect Old Files
+# 301 redirect old files
 Redirect 301 /new.html /
 Redirect 301 /new /
 Redirect 301 /+ https://plus.google.com/+abrahamwilliams
@@ -26,5 +27,7 @@ Header set X-XSS-Protection "1; mode=block"
 # Content stuff
 header set X-UA-Compatible "IE=edge, chrome=1"
 AddDefaultCharset utf-8
+
+# Enable client caching
 ExpiresActive On
 ExpiresDefault "access plus 1 week"
