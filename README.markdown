@@ -1,3 +1,3 @@
-Abraham Williams - @[abraham](https://twitter.com/abraham) - <the@abrah.am> - <http://abrah.am>
+Abraham Williams - [+AbrahamWilliams](https://plus.google.com/+abrahamwilliams) - <abraham@abrah.am> - <https://abrah.am>
 
-Source for <http://abrah.am>
+Source for <https://abrah.am>
