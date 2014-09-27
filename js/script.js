@@ -53,5 +53,5 @@ setTimeout(function() {
 document.addEventListener("DOMContentLoaded", function(event) {
     setTimeout(function() {
         document.body.classList.remove('blur');
-    }, 500);
+    }, 250);
 });
