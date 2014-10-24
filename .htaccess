@@ -16,7 +16,7 @@ RewriteRule ^(.*)$ $1.gz [L]
 # 301 redirect old files
 Redirect 301 /new.html /
 Redirect 301 /new /
-Redirect 301 /+ https://plus.google.com/+abrahamwilliams
+Redirect 301 /+ https://plus.google.com/+AbrahamWilliams
 Redirect 301 /contact /
 
 # Security Headers
