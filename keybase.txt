@@ -1,0 +1,71 @@
+https://keybase.io/abrahamwilliams
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://abrah.am
+  * I am abrahamwilliams (https://keybase.io/abrahamwilliams) on keybase.
+  * I have a public key with fingerprint D112 A2C4 6FE1 6875 F00A  01E1 2C24 148D EFBE BF13
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.8.6"
+        },
+        "key": {
+            "fingerprint": "d112a2c46fe16875f00a01e12c24148defbebf13",
+            "host": "keybase.io",
+            "key_id": "2c24148defbebf13",
+            "uid": "58a1f3d9a13cb188686f37ab55b1cf00",
+            "username": "abrahamwilliams"
+        },
+        "service": {
+            "hostname": "abrah.am",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1436278869,
+    "expire_in": 157680000,
+    "prev": "d62321e8963cb35882a9573970339529bfc3598ba5b1fb12ea93da1fb11278c3",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGbwMvMwMH48/6pl0dtfx5lPH3QLIkhdPaD0GqlpPyUSiWraqXknMzUvBIQKy8x
+N1XJSik7tTIpsThVLzNfIS8/JVUvq1gBqkZHqSy1qDgzPw+oykDPQs9MqVYHpByk
+OS0zLz21qKAoE2SWUoqhoVGiUbKJWVqqoZmFuWmagUGigWGqoVGykYmhiUVKalpS
+alKaoTHQyIz84hIUW5XAZsZnpgBFsagvBUuYWiQaphmnWCYaGicnGVpYmFmYpRmb
+JyaZmiYZJgNtAyksTi2CeikxqSgxIzG3PDMnJzMxtxjkbKBkWWZyKsjpIBcgK9RL
+zAVqLyjKL8lPzs8BimaUlBQUW4F0lVQWgJSVpybFQw2IT8rMSwH6HTlwDIEqk0sy
+QSYamhibGZkD3Wepo5RaUZBZlBqfCVJham5mYQAEIHtSy0AhZmZkbGSYamFpBvSQ
+samFhVGipam5saW5gbGxpamRZVJasrGppUVSItCDaUmGRqmJlsYpiSCmIdD8ZFDI
+FKcW5uUDzTYGujMxHWhmcWZ6XmJJaVGqUm0nkwwLAyMHAxsrEyj6Gbg4BWCJQvgv
+///4xTfrlrq6Lpvj89cqd1vSy/i8tmsHixq54+7bzpRefuLreeO5+zOCeSbHuR1r
+Vd7s9EX0ZqX2ok8F159k1qjrfOYKWKTZe9vjZju3QWhwnfRy++0vp1jM/puTf8ZF
+acHGedrnZxzLubnN//TOgATf5aunPu9j25klzJsp2S7d6SrZN0vwgqui3xLdWTp3
+PxX6peY+/eD3L1lvp2RxWope7C4n+fX/UlZoTp75k3f5eZ+GD7Oue/lu8r0T8qG/
+YtvVL3dvTN/4pvjLc73qT7xmEW5Tgv5KbuLobVnu02R3UWTfBaPrRyuuxj+M+Hkw
+dcm/uU+7dr3VeX40aFZSbtS6k7kP2N9pxn338S3+naHPsMjbaylj28n/uaGnEvZH
+vbyvm2S+WSQqL1MhOe6fk1DHrz3Chbx3G3cFJSXLrWFYtW7qf3fho1ZTD3Q1Nq6M
+f/T99LU7Pw4WWN++OuWRzyKLcMPVFwXrn3Psc5tSv272y8ZV4qtytaNam58//75K
+aalDQnX37BmSJ3/+f357Ua/+QTnfl7KCbjvnx15ZaB+8hm37y1aOHRceekXOT7o0
+9X/VSymFhbcDO7xEXoTJiC0T6t/ZwvTldpmz8Jf9jz5YpMXeLtgz8/rt9P0Jfzg6
+FOOOeMhPrhWY07fV3myJxM2UL58PqVjP+1Zyl8/Y/PAMLr2ae7NrlwWe4l+9o8La
+Y5OGeEfqUxlDlgPml0IzAA==
+=XCmW
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/abrahamwilliams
+
