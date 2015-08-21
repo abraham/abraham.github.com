@@ -1,13 +1,12 @@
 /* TEAM */
   Chef: Abraham Williams
   Contact: abraham@abrah.am
-  Google+: +Abraham Williams
-  App.net: @abraham
+  Google+: +AbrahamWilliams
   Twitter: @abraham
-  From: San Francisco, CA
+  From: Madison, WI
 
 /* SITE */
   Language: English
   Standards: HTML5
-  Componants: Bootstrap, Google+ widget, ADN Widgets, Facebook button, Twitter widget
+  Componants: Bootstrap, Google+ widget
   Software: TextMate 2
