@@ -1,0 +1,41 @@
+{
+  "name": "Abraham Williams",
+  "short_name": "Abraham",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "description": "Abraham Williams is a web engineer working for Bendyworks in Madison, WI.",
+  "icons": [
+    {
+      "src": "img/abraham-48.jpg",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "img/abraham-72.jpg",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "img/abraham-96.jpg",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "img/abraham-144.jpg",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "img/abraham-168.jpg",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "img/abraham-192.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
