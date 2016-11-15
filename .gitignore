@@ -1,1 +1,3 @@
 *.gz
+.firebaserc
+firebase-debug.log
