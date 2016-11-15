@@ -1,4 +1,4 @@
-var CACHE_NAME = 'v4';
+var CACHE_NAME = 'v5';
 var urlsToCache = [
   '/',
 
@@ -15,11 +15,23 @@ var urlsToCache = [
 ];
 
 self.addEventListener('install', function(event) {
-  var open = caches.open(CACHE_NAME)
+  var addAll = caches.open(CACHE_NAME)
     .then(function(cache) {
       return cache.addAll(urlsToCache);
     });
-  event.waitUntil(open);
+  event.waitUntil(addAll);
+});
+
+self.addEventListener('activate', function(event) {
+  var deleteOld = caches.keys().then(function(keyList) {
+    return Promise.all(keyList.map(function(key) {
+      if (CACHE_NAME !== key) {
+        return caches.delete(key);
+      }
+    }));
+  });
+
+  event.waitUntil(deleteOld);
 });
 
 self.addEventListener('fetch', function(event) {
