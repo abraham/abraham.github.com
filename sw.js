@@ -9,8 +9,8 @@ var urlsToCache = [
   'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
   'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0',
 
-  '/img/lake-xsmall.jpg',
-  '/img/lake.jpg',
+  '/img/moon-xsmall.jpg',
+  '/img/moon.jpg',
   '/img/abraham-512.jpg'
 ];
 
