@@ -1,0 +1,56 @@
+{
+  "hosting": {
+    "public": ".",
+    "redirects": [
+      {
+        "source": "/+",
+        "destination": "https://plus.google.com/+AbrahamWilliams",
+        "type": 301
+      },
+      {
+        "source": "/contact",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/new",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/new.html",
+        "destination": "/",
+        "type": 301
+      }
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Frame-Options",
+            "value": "DENY"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-XSS-Protection",
+            "value": "1; mode=block"
+          }
+        ]
+      }
+    ]
+  }
+}
