@@ -1,12 +1,8 @@
 var CACHE_NAME = 'v5';
 var urlsToCache = [
   '/',
-
-  '/css/bootstrap.min.css',
   '/css/font-awesome.min.css',
-
   '/fonts/fontawesome-webfont.woff2?v=4.7.0',
-
   '/img/moon-xsmall.jpg',
   '/img/moon.jpg',
   '/img/abraham-512.jpg'
