@@ -162,13 +162,13 @@
         ga('send', 'pageview');
 
         // Load higher resolution background image
-        setTimeout(function() {
+        window.addEventListener('load', function(event) {
             var imageObj = new Image();
             imageObj.src = '/img/moon.jpg';
             imageObj.onload = function() {
                 document.body.style.backgroundImage = "url('/img/moon.jpg')";
             };
-        }, 0);
+        });
 
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js').then(function(registration) {
