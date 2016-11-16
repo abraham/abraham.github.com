@@ -1,8 +1,8 @@
-var CACHE_NAME = 'v8';
+var CACHE_NAME = 'v9';
 var urlsToCache = [
   '/',
-  '/img/moon-xsmall.jpg',
-  '/img/moon.jpg',
+  '/img/sunrise-xsmall.jpeg',
+  '/img/sunrise.jpeg',
   '/img/abraham-512.jpg'
 ];
 

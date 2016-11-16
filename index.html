@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#212121">
     <link rel="icon" sizes="192x192" href="https://abrah.am/img/abraham-192.jpg">
     <link rel="manifest" href="/manifest.json">
 
@@ -46,9 +46,10 @@
             font-family: "Roboto", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
             font-weight: 400;
             color: #ECEFF1;
+            text-shadow: 0px 0px 3px #212121;
             padding: 24px;
             margin: 0;
-            background: #263238 url("/img/moon-xsmall.jpg") no-repeat center center fixed;
+            background: #263238 url("/img/sunrise-xsmall.jpeg") no-repeat center center fixed;
             background-size: cover;
             transition: all 0.25s ease-out;
         }
@@ -74,7 +75,7 @@
         }
 
         a:hover, a:focus {
-            color: #7b7b7b;
+            color: #9E9E9E;
             text-decoration: none;
             outline: 0;
         }
@@ -166,9 +167,9 @@
         // Load higher resolution background image
         window.addEventListener('load', function(event) {
             var imageObj = new Image();
-            imageObj.src = '/img/moon.jpg';
+            imageObj.src = '/img/sunrise.jpeg';
             imageObj.onload = function() {
-                document.body.style.backgroundImage = "url('/img/moon.jpg')";
+                document.body.style.backgroundImage = "url('/img/sunrise.jpeg')";
             };
         });
 
