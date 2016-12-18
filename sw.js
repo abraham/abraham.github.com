@@ -1,4 +1,4 @@
-var CACHE_NAME = 'v11';
+var CACHE_NAME = 'v12';
 var urlsToCache = [
   'https://abrah.am/',
   'https://abrah.am/img/sunrise-xsmall.jpeg',
