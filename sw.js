@@ -1,11 +1,13 @@
-var CACHE_NAME = 'v12';
+var CACHE_NAME = 'v13';
 var urlsToCache = [
   'https://abrah.am/',
+  'https://abrah.am/amp',
   'https://abrah.am/img/sunrise-xsmall.jpeg',
   'https://abrah.am/img/sunrise.jpeg',
   'https://abrah.am/img/abraham-512.jpg',
 
   'http://localhost:8080/',
+  'http://localhost:8080/amp',
   'http://localhost:8080/img/sunrise-xsmall.jpeg',
   'http://localhost:8080/img/sunrise.jpeg',
   'http://localhost:8080/img/abraham-512.jpg',
