@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ⚡ lang="en" itemscope itemtype="http://schema.org/Person">
+<html lang="en" itemscope itemtype="http://schema.org/Person">
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -188,7 +188,15 @@
       </script>
     </amp-analytics>
 
-    <amp-install-serviceworker src="/sw.js" data-iframe-src="/sw" layout="nodisplay">
-    </amp-install-serviceworker>
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function(reg) {
+          console.log('Registration succeeded. Scope is ' + reg.scope);
+        }).catch(function(error) {
+          console.log('Registration failed with ' + error);
+        });
+    }
+    </script>
 </body>
 </html>
