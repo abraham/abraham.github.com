@@ -6,6 +6,7 @@
   "background_color": "#212121",
   "theme_color": "#212121",
   "description": "Abraham Williams is a web engineer working for Bendyworks in Madison, WI.",
+  "display": "standalone",
   "icons": [
     {
       "src": "img/user.png",
