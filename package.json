@@ -1,0 +1,20 @@
+{
+  "name": "abrah-am",
+  "version": "1.0.0",
+  "description": "Source for https://abrah.am",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abraham/abrah.am.git"
+  },
+  "keywords": [],
+  "author": "Abraham Williams <abraham@abrah.am>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/abraham/abrah.am/issues"
+  },
+  "homepage": "https://abrah.am"
+}
