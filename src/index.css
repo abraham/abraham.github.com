@@ -1,0 +1,87 @@
+@import "~@material/chips/mdc-chips";
+
+h2 {
+  margin-left: 12px;
+}
+
+.grid-item {
+  margin: 12px;
+  width: calc(50% - 24px);
+  border-width: 0;
+}
+
+node-package, github-repository, twitter-status {
+  font-size: 0.5em;
+  color: #000;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+}
+
+header h1 {
+  text-align: center;
+}
+
+node-package {
+  --node-package-background-color: #fff;
+  --node-package-color: #2196F3;
+  --node-package-link-color: #0D47A1;
+}
+
+.profile-chip {
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.profile-chip span, .profile-chip i {
+  font-size: 1.5em !important;
+  color: #1976D2 !important;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  border-radius: 8px;
+}
+
+.description {
+  text-align: justify;
+  margin: 0 12px;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+#maine {
+  max-width: 1280px;
+  padding-top: 48px;
+  margin: 128px auto 0 auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media all and (max-width: 960px) {
+  .grid-item {
+    width: calc(100%);
+    margin: 12px 0;
+  }
+
+  h2 {
+    margin-left: 0;
+  }
+
+  .description {
+    margin: 0 0;
+  }
+}

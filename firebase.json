@@ -40,6 +40,20 @@
       }
     ],
     "headers": [
+      {
+        "source" : "@(vendors|style|main|precache)*.js",
+        "headers" : [{
+          "key" : "Cache-Control",
+          "value" : "max-age=604800"
+        }]
+      },
+      {
+        "source" : "/img/*.jpg",
+        "headers" : [{
+          "key" : "Cache-Control",
+          "value" : "max-age=604800"
+        }]
+      },
       /*{
         "source": "*.html",
         "headers": [
@@ -73,6 +87,16 @@
           {
             "key": "X-XSS-Protection",
             "value": "1; mode=block"
+          }
+        ]
+      },
+
+      {
+        "source": "/sw.js",
+        "headers": [
+          {
+            "key" : "Cache-Control",
+            "value": "no-cache"
           }
         ]
       }

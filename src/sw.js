@@ -1,73 +1,58 @@
-var CACHE_NAME = 'v13';
-var urlsToCache = [
-  'https://abrah.am/',
-  'https://abrah.am/amp',
-  'https://abrah.am/img/sunrise-xsmall.jpeg',
-  'https://abrah.am/img/sunrise.jpeg',
-  'https://abrah.am/img/abraham-512.jpg',
+workbox.skipWaiting();
+workbox.clientsClaim();
 
-  'http://localhost:8080/',
-  'http://localhost:8080/amp',
-  'http://localhost:8080/img/sunrise-xsmall.jpeg',
-  'http://localhost:8080/img/sunrise.jpeg',
-  'http://localhost:8080/img/abraham-512.jpg',
+workbox.precaching.precacheAndRoute([
+  { url: '/' },
+  { url: '/img/abraham-512.jpg' },
+  { url: '/img/abraham-192.jpg' },
+]);
 
-  'https://cdn.ampproject.org/v0.js',
-  'https://cdn.ampproject.org/v0/amp-analytics-0.1.js',
-  'https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js',
+workbox.routing.registerRoute(
+  new RegExp('^https://(.*).(googleapis|gstatic).com/(.*)'),
+  workbox.strategies.cacheFirst({
+    cacheName: 'google',
+    plugins: [
+      new workbox.cacheableResponse.Plugin({
+        statuses: [0, 200],
+      }),
+    ],
+  }),
+);
 
-  'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
-  'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0'
-];
+workbox.routing.registerRoute(
+  new RegExp('^https://unpkg.com/(.*)\.json$'),
+  workbox.strategies.cacheFirst({
+    cacheName: 'unpkg',
+    plugins: [
+      new workbox.cacheableResponse.Plugin({
+        statuses: [0, 200],
+      }),
+    ],
+  }),
+);
 
-self.addEventListener('install', function(event) {
-  // var addAll = caches.open(CACHE_NAME)
-  //   .then(function(cache) {
-  //     return cache.addAll(urlsToCache);
-  //   });
-  // event.waitUntil(addAll);
-});
+workbox.routing.registerRoute(
+  new RegExp('^https://api.github.com/(.*)'),
+  workbox.strategies.cacheFirst({
+    cacheName: 'github',
+    plugins: [
+      new workbox.cacheableResponse.Plugin({
+        statuses: [0, 200],
+      }),
+    ],
+  }),
+);
 
-self.addEventListener('activate', function(event) {
-  var deleteOld = caches.keys().then(function(keyList) {
-    return Promise.all(keyList.map(function(key) {
-      if (CACHE_NAME !== key) {
-        return caches.delete(key);
-      }
-    }));
-  });
+workbox.routing.registerRoute(
+  new RegExp('^https://pbs.twimg.com/(.*)'),
+  workbox.strategies.cacheFirst({
+    cacheName: 'twitter',
+    plugins: [
+      new workbox.cacheableResponse.Plugin({
+        statuses: [0, 200],
+      }),
+    ],
+  }),
+);
 
-  event.waitUntil(deleteOld);
-});
-
-self.addEventListener('fetch', function(event) {
-  var open = caches.open(CACHE_NAME).then(function(cache) {
-    return caches.match(event.request)
-      .then(function(response) {
-        if (response) {
-          return response;
-        }
-
-        return fetch(event.request.clone())
-          .then(function(response) {
-
-            if (response.status < 400 && shouldCacheUrl(event.request.url)) {
-              cache.put(event.request, response.clone());
-            }
-
-            return response;
-          });
-      }).catch(function(error) {
-        console.error('Error in fetch handler:', error);
-
-        throw error;
-      });
-  });
-
-  event.respondWith(open);
-});
-
-
-function shouldCacheUrl(url) {
-  return urlsToCache.indexOf(url) > -1;
-}
+workbox.precaching.precacheAndRoute(self.__precacheManifest);
