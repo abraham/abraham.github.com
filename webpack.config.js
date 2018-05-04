@@ -56,6 +56,10 @@ module.exports = {
         to: '.',
       },
       {
+        from: '*.ico',
+        to: '.',
+      },
+      {
         from: '*.png',
         to: '.',
       },
