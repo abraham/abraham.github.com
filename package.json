@@ -5,9 +5,10 @@
   "private": true,
   "scripts": {
     "clear": "rm -rf public/*",
-    "build": "npm run clear && webpack",
+    "build": "webpack",
     "build:prod": "npm run clear && NODE_ENV=production webpack",
     "start": "webpack-dev-server",
+    "start:prod": "firebase serve",
     "target:staging": "firebase use staging",
     "target:prod": "firebase use prod",
     "deploy:staging": "npm run build:prod && npm run target:staging && firebase deploy",
