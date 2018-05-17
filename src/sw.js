@@ -1,7 +1,11 @@
 workbox.skipWaiting();
 workbox.clientsClaim();
 
-workbox.routing.registerNavigationRoute('/index.html');
+workbox.routing.registerNavigationRoute('/index.html', {
+  whitelist: [
+    new RegExp('/$')
+  ]
+});
 
 workbox.precaching.precacheAndRoute([
   { url: '/img/abraham-512.jpg' },
