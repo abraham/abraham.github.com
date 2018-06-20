@@ -27,7 +27,7 @@
   },
   "homepage": "https://abrah.am",
   "devDependencies": {
-    "@types/material-components-web": "^0.26.0",
+    "@types/material-components-web": "^0.35.0",
     "@types/webcomponents.js": "^0.6.32",
     "@types/webfontloader": "^1.6.29",
     "copy-webpack-plugin": "^4.5.1",
@@ -53,7 +53,7 @@
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^1.2.0",
     "github-repository": "^0.2.1",
-    "material-components-web": "^0.35.0",
+    "material-components-web": "^0.36.1",
     "node-package": "^1.1.0",
     "twitter-status": "^0.2.0",
     "webfontloader": "^1.6.28"
