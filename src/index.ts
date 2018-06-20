@@ -37,8 +37,8 @@ function importPollyfill(): Promise<void> {
 
 function importComponents(): Promise<any[]> {
   return Promise.all([
-    import(/* webpackChunkName: 'components' */ 'node-package')
-    // import(/* webpackChunkName: 'components' */ 'github-repository');
-    // import(/* webpackChunkName: 'components' */ 'twitter-status');
+    import(/* webpackChunkName: 'components' */ 'node-package'),
+    import(/* webpackChunkName: 'components' */ 'github-repository'),
+    // import(/* webpackChunkName: 'components' */ 'twitter-status'),
   ]);
 }

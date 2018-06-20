@@ -10,6 +10,10 @@ h2 {
   border-width: 0;
 }
 
+github-repository {
+  font-size: 0.6em;
+}
+
 node-package {
   font-size: 0.5em;
   color: #000;
