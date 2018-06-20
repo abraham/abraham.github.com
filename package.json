@@ -51,7 +51,7 @@
     "workbox-webpack-plugin": "^3.3.0"
   },
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^1.2.0",
+    "@webcomponents/webcomponentsjs": "^2.0.2",
     "github-repository": "^0.2.1",
     "material-components-web": "^0.36.1",
     "node-package": "^1.1.0",

@@ -31,7 +31,7 @@ function importPollyfill(): Promise<void> {
   if ('customElements' in window) {
     return Promise.resolve();
   } else {
-    return import(/* webpackChunkName: 'polyfill' */ '@webcomponents/webcomponentsjs/webcomponents-sd-ce');
+    return import(/* webpackChunkName: 'polyfill' */ '@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce');
   }
 }
 
