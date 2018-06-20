@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^1.2.0",
-    "github-repository": "^0.2.0",
+    "github-repository": "^0.2.1",
     "material-components-web": "^0.35.0",
     "node-package": "^1.1.0",
     "twitter-status": "^0.2.0",
