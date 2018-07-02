@@ -55,7 +55,7 @@
     "github-repository": "0.2.2",
     "material-components-web": "0.36.1",
     "node-package": "1.1.1",
-    "twitter-status": "0.2.2",
+    "twitter-status": "0.2.3",
     "webfontloader": "1.6.28"
   }
 }
