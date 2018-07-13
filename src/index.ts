@@ -25,15 +25,12 @@ function registerSW(): Promise<ServiceWorkerRegistration|void> {
   }
 }
 
-function importPollyfill(): Promise<any[]> {
-  const polyfills = [];
-  if (!('customElements' in window)) {
-     polyfills.push(import(/* webpackChunkName: 'polyfill-ce' */ '@webcomponents/webcomponentsjs/bundles/webcomponents-ce'));
+function importPollyfill(): Promise<void> {
+  if ('customElements' in window && 'attachShadow' in document.head) {
+    return Promise.resolve();
+  } else {
+    return import(/* webpackChunkName: 'polyfill' */ '@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce');
   }
-  if (!('attachShadow' in document.head)) {
-     polyfills.push(import(/* webpackChunkName: 'polyfill-sd' */ '@webcomponents/webcomponentsjs/bundles/webcomponents-sd'));
-  }
-  return Promise.all(polyfills);
 }
 
 function importComponents(): Promise<any[]> {
