@@ -1,8 +1,6 @@
-import './index.css';
-
-import * as WebFont from 'webfontloader';
-
 import { MDCChipSet } from '@material/chips';
+import * as WebFont from 'webfontloader';
+import './index.css';
 
 window.addEventListener('load', () => {
   const chipSet = new MDCChipSet(document.querySelector('.mdc-chip-set'));
