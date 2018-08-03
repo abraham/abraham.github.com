@@ -28,7 +28,7 @@
   "homepage": "https://abrah.am",
   "devDependencies": {
     "@types/material-components-web": "0.35.0",
-    "@types/webcomponents.js": "0.6.32",
+    "@types/webcomponents.js": "0.6.33",
     "@types/webfontloader": "1.6.29",
     "copy-webpack-plugin": "4.5.2",
     "css-loader": "1.0.0",
