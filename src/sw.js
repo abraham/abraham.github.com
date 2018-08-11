@@ -4,13 +4,8 @@ workbox.setConfig({
 workbox.skipWaiting();
 workbox.clientsClaim();
 
-workbox.routing.registerNavigationRoute('/index.html', {
-  whitelist: [
-    new RegExp('/$')
-  ]
-});
-
 workbox.precaching.precacheAndRoute([
+  { url: '/' },
   { url: '/img/abraham-512.jpg' },
   { url: '/img/abraham-192.jpg' },
 ]);
