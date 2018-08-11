@@ -57,5 +57,8 @@
     "node-package": "1.3.0",
     "twitter-status": "0.4.1",
     "webfontloader": "1.6.28"
+  },
+  "engines": {
+    "node": "8"
   }
 }
