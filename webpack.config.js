@@ -7,6 +7,7 @@ const html = require('html-webpack-plugin');
 const inline = require('html-webpack-inline-source-plugin');
 const path = require('path');
 const workbox = require('workbox-webpack-plugin');
+const sri = require('webpack-subresource-integrity');
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -19,8 +20,9 @@ module.exports = {
     hot: false
   },
   output: {
+    crossOriginLoading: 'anonymous',
     chunkFilename: '[name]-[chunkhash].js',
-    filename: '[name]-[contenthash].js',
+    filename: '[name]-[chunkhash].js', // Changed from `contenthash` because of https://github.com/waysact/webpack-subresource-integrity/issues/78
     path: path.resolve(__dirname, 'public'),
   },
   optimization: {
@@ -72,6 +74,10 @@ module.exports = {
         to: '.',
       },
     ]),
+    new sri({
+      hashFuncNames: ['sha256', 'sha384'],
+      enabled: production,
+    }),
   ],
   module: {
     rules: [
