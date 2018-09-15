@@ -22,7 +22,7 @@ module.exports = {
   output: {
     crossOriginLoading: 'anonymous',
     chunkFilename: '[name]-[chunkhash].js',
-    filename: '[name]-[chunkhash].js', // Changed from `contenthash` because of https://github.com/waysact/webpack-subresource-integrity/issues/78
+    filename: '[name]-[contenthash].js',
     path: path.resolve(__dirname, 'public'),
   },
   optimization: {
