@@ -60,6 +60,6 @@
     "webfontloader": "1.6.28"
   },
   "engines": {
-    "node": "8"
+    "node": "10"
   }
 }
