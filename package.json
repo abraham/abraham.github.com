@@ -13,7 +13,7 @@
     "target:prod": "firebase use prod",
     "deploy:staging": "npm run build:prod && npm run target:staging && firebase deploy",
     "deploy:prod": "npm run build:prod && npm run target:prod && firebase deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build:prod"
   },
   "repository": {
     "type": "git",
