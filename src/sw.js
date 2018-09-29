@@ -5,9 +5,8 @@ workbox.skipWaiting();
 workbox.clientsClaim();
 
 workbox.precaching.precacheAndRoute([
-  { url: '/' },
-  { url: '/img/abraham-512.jpg' },
-  { url: '/img/abraham-192.jpg' },
+  { url: '/img/abraham-512.jpg', revision: '8a7bcd688d7d98bfa600ad32794db76345f202e1' },
+  { url: '/img/abraham-192.jpg', revision: 'fbad5dd962ecdab56341edb3b7e6cbaa3d0cf313' },
 ]);
 
 workbox.routing.registerRoute(
