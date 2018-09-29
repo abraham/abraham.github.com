@@ -3,7 +3,7 @@ import * as WebFont from 'webfontloader';
 import './index.css';
 
 window.addEventListener('load', () => {
-  const chipSet = new MDCChipSet(document.querySelector('.mdc-chip-set'));
+  new MDCChipSet(document.querySelector('.mdc-chip-set'));
 
   importPollyfill()
     .then(importComponents)
