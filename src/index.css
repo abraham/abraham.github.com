@@ -66,15 +66,8 @@ header h1 {
 .app-fab--absolute {
   background-color: #1DA1F2;
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-}
-
-@media(min-width: 1024px) {
-   .app-fab--absolute {
-    bottom: 1.5rem;
-    right: 1.5rem;
-  }
+  bottom: 1.5rem;
+  right: 1.5rem;
 }
 
 #maine {
@@ -87,6 +80,15 @@ header h1 {
 }
 
 @media all and (max-width: 960px) {
+  #maine {
+    max-width: 640px;
+  }
+
+  .app-fab--absolute {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
   .grid-item {
     width: calc(100%);
     margin: 12px 0;
