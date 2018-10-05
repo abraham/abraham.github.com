@@ -3,15 +3,14 @@ import { MDCRipple } from '@material/ripple';
 import * as WebFont from 'webfontloader';
 import './index.css';
 
-window.addEventListener('load', () => {
-  new MDCChipSet(document.querySelector('.mdc-chip-set'));
-  new MDCRipple(document.querySelector('.mdc-fab'));
+new MDCChipSet(document.querySelector('.mdc-chip-set'));
+new MDCRipple(document.querySelector('.mdc-fab'));
+document.querySelector('.mdc-fab').classList.remove('mdc-fab--exited');
 
-  importPollyfill()
-    .then(importComponents)
-    .then(registerSW)
-    .catch(error => console.log(`Error importing dependancies or registering Service Worker: ${error}`));
-});
+importPollyfill()
+  .then(importComponents)
+  .then(registerSW)
+  .catch(error => console.log(`Error importing dependancies or registering Service Worker: ${error}`));
 
 WebFont.load({
   google: {
