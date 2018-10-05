@@ -20,7 +20,7 @@ node-package {
   border-color: #CB3837;
 }
 
-a {
+a, .profile-chip i {
   color: #000;
 }
 
@@ -28,8 +28,10 @@ header h1 {
   text-align: center;
 }
 
-.profile-chip span, .profile-chip i {
-  color: #000 !important;
+.profile-chip {
+  color: #000;
+  background-color: #fff;
+  border: 1px #000 solid;
 }
 
 .grid {
