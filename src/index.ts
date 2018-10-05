@@ -1,9 +1,11 @@
 import { MDCChipSet } from '@material/chips';
+import { MDCRipple } from '@material/ripple';
 import * as WebFont from 'webfontloader';
 import './index.css';
 
 window.addEventListener('load', () => {
   new MDCChipSet(document.querySelector('.mdc-chip-set'));
+  new MDCRipple(document.querySelector('.mdc-fab'));
 
   importPollyfill()
     .then(importComponents)

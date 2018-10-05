@@ -1,4 +1,5 @@
 @import "~@material/chips/mdc-chips";
+@import "~@material/fab/mdc-fab";
 
 h2 {
   margin-left: 12px;
@@ -58,6 +59,20 @@ header h1 {
   margin: 12px 12px;
   border: 1px solid #000;
   border-radius: 8px;
+}
+
+.app-fab--absolute {
+  background-color: #1DA1F2;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+@media(min-width: 1024px) {
+   .app-fab--absolute {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }
 
 #maine {
