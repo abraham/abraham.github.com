@@ -15,9 +15,9 @@ h2 {
 node-package {
   width: 100%;
   --node-package-background-color: #fff;
-  --node-package-color: #CB3837;
-  --node-package-link-color: #CB3837;
-  border-color: #CB3837;
+  --node-package-color: #000;
+  --node-package-link-color: #000;
+  border-color: #000;
 }
 
 a, .profile-chip i {
