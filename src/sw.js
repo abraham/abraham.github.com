@@ -9,13 +9,26 @@ workbox.precaching.precacheAndRoute([
   { url: '/img/abraham-192.jpg', revision: 'fbad5dd962ecdab56341edb3b7e6cbaa3d0cf313' },
 ]);
 
+// Cache the Google Fonts stylesheets
 workbox.routing.registerRoute(
-  new RegExp('^https://(.*).(googleapis|gstatic).com/(.*)'),
+  /^https:\/\/fonts\.googleapis\.com/,
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'google-fonts-stylesheets',
+  }),
+);
+
+// Cache the Google Fonts webfont files
+workbox.routing.registerRoute(
+  /^https:\/\/fonts\.gstatic\.com/,
   workbox.strategies.cacheFirst({
-    cacheName: 'google',
+    cacheName: 'google-fonts-webfonts',
     plugins: [
       new workbox.cacheableResponse.Plugin({
         statuses: [0, 200],
+      }),
+      new workbox.expiration.Plugin({
+        maxAgeSeconds: 60 * 60 * 24 * 365,
+        maxEntries: 30,
       }),
     ],
   }),
