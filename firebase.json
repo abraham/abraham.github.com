@@ -14,7 +14,7 @@
     "redirects": [
       {
         "source": "/+",
-        "destination": "https://plus.google.com/+AbrahamWilliams",
+        "destination": "/",
         "type": 301
       },
       {
