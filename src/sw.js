@@ -1,5 +1,5 @@
 workbox.setConfig({
-  debug: true
+  debug: false,
 });
 workbox.skipWaiting();
 workbox.clientsClaim();
