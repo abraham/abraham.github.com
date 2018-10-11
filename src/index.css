@@ -71,7 +71,12 @@ header h1 {
 }
 
 .mdc-fab.mdc-fab--extended {
-  width: 130px;
+  width: 179px;
+}
+
+.mdc-fab.mdc-fab--extended .mdc-fab__icon {
+  padding-left: 8px;
+  width: 56px;
 }
 
 .mdc-fab:not(.mdc-fab--extended) {
@@ -89,6 +94,16 @@ header h1 {
 }
 .mdc-fab:not(.mdc-fab--extended) .mdc-fab__label {
   width: 0;
+}
+
+.mdc-fab.mdc-fab--extended {
+  height: 56px;
+  border-radius: 28px;
+}
+
+.mdc-fab {
+  font-size: 1rem;
+  letter-spacing: 0.08929em;
 }
 
 #maine {
