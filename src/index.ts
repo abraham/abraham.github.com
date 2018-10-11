@@ -53,9 +53,11 @@ function extendFab(extended: boolean) {
 let last_known_scroll_position = 0;
 let extended = true;
 let ticking = false;
+let scrolled = false;
 
 window.addEventListener('scroll', function() {
-  if (!ticking) {
+  const top = window.scrollY < 50;
+  if (!ticking && scrolled && (extended || top)) {
     extended = window.scrollY < last_known_scroll_position;
     last_known_scroll_position = window.scrollY;
     window.requestAnimationFrame(function() {
@@ -64,4 +66,5 @@ window.addEventListener('scroll', function() {
     });
     ticking = true;
   }
+  scrolled = true;
 });
