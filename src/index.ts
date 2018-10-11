@@ -41,3 +41,27 @@ function importComponents(): Promise<any[]> {
     // import(/* webpackChunkName: 'components' */ 'twitter-status'),
   ]);
 }
+
+function extendFab(extended: boolean) {
+  if (extended) {
+    document.querySelector('.mdc-fab').classList.add('mdc-fab--extended');
+  } else {
+    document.querySelector('.mdc-fab').classList.remove('mdc-fab--extended');
+  }
+}
+
+let last_known_scroll_position = 0;
+let extended = true;
+let ticking = false;
+
+window.addEventListener('scroll', function() {
+  if (!ticking) {
+    extended = window.scrollY < last_known_scroll_position;
+    last_known_scroll_position = window.scrollY;
+    window.requestAnimationFrame(function() {
+      extendFab(extended);
+      ticking = false;
+    });
+    ticking = true;
+  }
+});

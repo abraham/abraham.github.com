@@ -70,6 +70,27 @@ header h1 {
   right: 1.5rem;
 }
 
+.mdc-fab.mdc-fab--extended {
+  width: 130px;
+}
+
+.mdc-fab:not(.mdc-fab--extended) {
+  width: 56px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.mdc-fab, .mdc-fab__label {
+  transition: all 200ms ease-in-out;
+}
+
+.mdc-fab .mdc-fab__label {
+  width: 100%;
+}
+.mdc-fab:not(.mdc-fab--extended) .mdc-fab__label {
+  width: 0;
+}
+
 #maine {
   max-width: 1280px;
   padding-top: 48px;
