@@ -105,11 +105,6 @@ header h1 {
     max-width: 640px;
   }
 
-  .app-fab--absolute {
-    bottom: 1rem;
-    right: 1rem;
-  }
-
   .grid-item {
     width: calc(100%);
     margin: 12px 0;
