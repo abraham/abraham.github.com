@@ -1,5 +1,5 @@
-import { MDCChipSet } from '@material/chips';
-import { MDCRipple } from '@material/ripple';
+import { MDCChipSet } from '@material/chips/index';
+import { MDCRipple } from '@material/ripple/index';
 import * as WebFont from 'webfontloader';
 import './index.css';
 
