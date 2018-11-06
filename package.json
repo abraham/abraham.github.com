@@ -8,12 +8,13 @@
     "build": "webpack",
     "build:prod": "npm run clear && NODE_ENV=production webpack",
     "start": "webpack-dev-server",
-    "start:prod": "firebase serve",
+    "start:prod": "npm run build:prod && http-server public",
     "target:staging": "firebase use staging",
     "target:prod": "firebase use prod",
     "deploy:staging": "npm run build:prod && npm run target:staging && firebase deploy",
     "deploy:prod": "npm run build:prod && npm run target:prod && firebase deploy",
-    "test": "npm run build:prod"
+    "lighthouse": "lighthouse-ci http://localhost:8080/ --performance=98 --pwa=92 --accessibility=93 --best-practice=87 --seo=100",
+    "test": "start-server-and-test start:prod http://localhost:8080 lighthouse"
   },
   "repository": {
     "type": "git",
@@ -36,10 +37,13 @@
     "html-webpack-exclude-assets-plugin": "0.0.7",
     "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "3.2.0",
+    "http-server": "0.11.1",
+    "lighthouse-ci": "1.2.1",
     "mini-css-extract-plugin": "0.4.4",
     "node-sass": "4.10.0",
     "sass-loader": "7.1.0",
     "script-ext-html-webpack-plugin": "2.1.2",
+    "start-server-and-test": "1.7.7",
     "style-loader": "0.23.1",
     "ts-loader": "5.3.0",
     "typescript": "3.1.6",
@@ -48,7 +52,6 @@
     "webpack-cli": "3.1.2",
     "webpack-dev-server": "3.1.10",
     "webpack-subresource-integrity": "1.2.0",
-    "workbox": "0.0.0",
     "workbox-webpack-plugin": "3.6.3"
   },
   "dependencies": {
