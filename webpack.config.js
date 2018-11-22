@@ -74,10 +74,10 @@ module.exports = {
         to: '.',
       },
     ]),
-    new sri({
-      hashFuncNames: ['sha256', 'sha384'],
-      enabled: production,
-    }),
+    // new sri({
+    //   hashFuncNames: ['sha256', 'sha384', 'sha512'],
+    //   enabled: production,
+    // }),
   ],
   module: {
     rules: [
