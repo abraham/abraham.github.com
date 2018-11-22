@@ -1,6 +1,8 @@
-workbox.setConfig({
-  debug: false,
+const SECONDS_IN_A_DAY = 24 * 60 * 60;
+const ONE_WEEK_EXPIRE = new workbox.expiration.Plugin({
+  maxAgeSeconds: 7 * SECONDS_IN_A_DAY,
 });
+
 workbox.skipWaiting();
 workbox.clientsClaim();
 
@@ -27,7 +29,7 @@ workbox.routing.registerRoute(
         statuses: [0, 200],
       }),
       new workbox.expiration.Plugin({
-        maxAgeSeconds: 60 * 60 * 24 * 365,
+        maxAgeSeconds: 365 * SECONDS_IN_A_DAY,
         maxEntries: 30,
       }),
     ],
@@ -42,6 +44,7 @@ workbox.routing.registerRoute(
       new workbox.cacheableResponse.Plugin({
         statuses: [0, 200],
       }),
+      ONE_WEEK_EXPIRE
     ],
   }),
 );
@@ -54,6 +57,7 @@ workbox.routing.registerRoute(
       new workbox.cacheableResponse.Plugin({
         statuses: [0, 200],
       }),
+      ONE_WEEK_EXPIRE
     ],
   }),
 );
@@ -66,8 +70,9 @@ workbox.routing.registerRoute(
       new workbox.cacheableResponse.Plugin({
         statuses: [0, 200],
       }),
+      ONE_WEEK_EXPIRE
     ],
   }),
 );
 
-workbox.precaching.precacheAndRoute(self.__precacheManifest);
+workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
