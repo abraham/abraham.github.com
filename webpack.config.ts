@@ -1,13 +1,11 @@
-const chunkHash = require('webpack-chunk-hash');
-const copy = require('copy-webpack-plugin');
-const exclude = require('html-webpack-exclude-assets-plugin');
-const extension = require('script-ext-html-webpack-plugin');
-const extract = require('mini-css-extract-plugin');
-const html = require('html-webpack-plugin');
-const inline = require('html-webpack-inline-source-plugin');
-const path = require('path');
-const workbox = require('workbox-webpack-plugin');
-const sri = require('webpack-subresource-integrity');
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import HtmlWebpackInlineSourcePlugin from 'html-webpack-inline-source-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import path from 'path';
+import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
+import WebpackChunkHash from 'webpack-chunk-hash';
+import { InjectManifest } from 'workbox-webpack-plugin';
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -21,8 +19,8 @@ module.exports = {
   },
   output: {
     crossOriginLoading: 'anonymous',
-    chunkFilename: '[name]-[chunkhash].js',
-    filename: '[name]-[contenthash].js',
+    chunkFilename: '[name]-[hash].js',
+    filename: '[name]-[hash].js',
     path: path.resolve(__dirname, 'public'),
   },
   optimization: {
@@ -38,21 +36,21 @@ module.exports = {
     }
   },
   plugins: [
-    new extract({ filename: '[name]-[contenthash].css' }),
-    new html({
+    new MiniCssExtractPlugin({ filename: '[name]-[hash].css' }),
+    new HtmlWebpackPlugin({
       excludeAssets: [/style-.*\.js/],
       filename: 'index.html',
       inlineSource: '.(css)$',
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
-    new inline(),
-    new chunkHash(),
-    new extension({ defaultAttribute: 'async' }),
-    new workbox.InjectManifest({
+    new HtmlWebpackInlineSourcePlugin(),
+    new WebpackChunkHash(),
+    new ScriptExtHtmlWebpackPlugin({ defaultAttribute: 'async' }),
+    new InjectManifest({
       swSrc: path.resolve(__dirname, 'src', 'sw.js'),
       swDest: 'sw.js',
     }),
-    new copy([
+    new CopyWebpackPlugin([
       {
         from: '*.txt',
         to: '.',
@@ -85,7 +83,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          extract.loader,
+          MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'sass-loader',
