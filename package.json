@@ -35,7 +35,7 @@
     "@types/node": "10.12.12",
     "@types/webcomponents.js": "0.6.33",
     "@types/webfontloader": "1.6.29",
-    "@types/webpack": "4.4.20",
+    "@types/webpack": "4.4.21",
     "@types/webpack-dev-server": "3.1.1",
     "@types/webpack-subresource-integrity": "1.2.0",
     "copy-webpack-plugin": "4.6.0",
