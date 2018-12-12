@@ -32,7 +32,7 @@
     "@types/html-webpack-plugin": "3.2.0",
     "@types/material-components-web": "0.35.0",
     "@types/mini-css-extract-plugin": "0.2.0",
-    "@types/node": "10.12.12",
+    "@types/node": "10.12.13",
     "@types/webcomponents.js": "0.6.33",
     "@types/webfontloader": "1.6.29",
     "@types/webpack": "4.4.21",
