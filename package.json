@@ -33,7 +33,7 @@
     "@types/material-components-web": "0.43.1",
     "@types/mini-css-extract-plugin": "0.2.0",
     "@types/node": "10.12.23",
-    "@types/webcomponents.js": "0.6.33",
+    "@types/webcomponents.js": "0.6.34",
     "@types/webfontloader": "1.6.29",
     "@types/webpack": "4.4.24",
     "@types/webpack-dev-server": "3.1.2",
