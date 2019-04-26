@@ -28,7 +28,7 @@
   },
   "homepage": "https://abrah.am",
   "devDependencies": {
-    "@types/copy-webpack-plugin": "4.4.4",
+    "@types/copy-webpack-plugin": "5.0.0",
     "@types/html-webpack-plugin": "3.2.0",
     "@types/material-components-web": "0.43.1",
     "@types/mini-css-extract-plugin": "0.2.0",
@@ -38,7 +38,7 @@
     "@types/webpack": "4.4.27",
     "@types/webpack-dev-server": "3.1.5",
     "@types/webpack-subresource-integrity": "1.2.0",
-    "copy-webpack-plugin": "5.0.2",
+    "copy-webpack-plugin": "5.0.3",
     "css-loader": "2.1.1",
     "extract-text-webpack-plugin": "3.0.2",
     "html-webpack-inline-source-plugin": "0.0.10",
