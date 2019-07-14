@@ -13,7 +13,7 @@
     "target:prod": "firebase use prod",
     "deploy:staging": "npm run build:prod && npm run target:staging && firebase deploy",
     "deploy:prod": "npm run build:prod && npm run target:prod && firebase deploy",
-    "lighthouse": "lighthouse-ci http://localhost:8080/ --performance=98 --pwa=92 --accessibility=93 --best-practice=87 --seo=100",
+    "lighthouse": "lighthouse-ci http://localhost:8080/ --performance=95 --pwa=90 --accessibility=90 --best-practice=90 --seo=100",
     "test": "start-server-and-test start:prod http://localhost:8080 lighthouse"
   },
   "repository": {
