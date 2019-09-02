@@ -14,6 +14,7 @@
     "deploy:staging": "npm run build:prod && npm run target:staging && firebase deploy",
     "deploy:prod": "npm run build:prod && npm run target:prod && firebase deploy",
     "lighthouse": "lighthouse-ci http://localhost:8080/ --performance=95 --pwa=90 --accessibility=90 --best-practice=90 --seo=100",
+    "lint": "eslint src *.ts",
     "test": "start-server-and-test start:prod http://localhost:8080 lighthouse"
   },
   "repository": {
@@ -38,8 +39,13 @@
     "@types/webpack": "4.39.1",
     "@types/webpack-dev-server": "3.1.7",
     "@types/webpack-subresource-integrity": "1.2.0",
+    "@typescript-eslint/eslint-plugin": "2.0.0",
+    "@typescript-eslint/parser": "2.0.0",
     "copy-webpack-plugin": "5.0.4",
     "css-loader": "3.2.0",
+    "eslint": "6.3.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.18.2",
     "extract-text-webpack-plugin": "3.0.2",
     "firebase-tools": "7.2.1",
     "html-webpack-inline-source-plugin": "0.0.10",

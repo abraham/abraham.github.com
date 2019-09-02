@@ -1,3 +1,5 @@
+/* global workbox */
+
 const SECONDS_IN_A_DAY = 24 * 60 * 60;
 const ONE_WEEK_EXPIRE = new workbox.expiration.Plugin({
   maxAgeSeconds: 7 * SECONDS_IN_A_DAY,
@@ -37,14 +39,14 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
-  new RegExp('^https://unpkg.com/(.*)\.json$'),
+  new RegExp('^https://unpkg.com/(.*).json$'),
   workbox.strategies.cacheFirst({
     cacheName: 'unpkg',
     plugins: [
       new workbox.cacheableResponse.Plugin({
         statuses: [0, 200],
       }),
-      ONE_WEEK_EXPIRE
+      ONE_WEEK_EXPIRE,
     ],
   }),
 );
@@ -57,7 +59,7 @@ workbox.routing.registerRoute(
       new workbox.cacheableResponse.Plugin({
         statuses: [0, 200],
       }),
-      ONE_WEEK_EXPIRE
+      ONE_WEEK_EXPIRE,
     ],
   }),
 );
@@ -70,9 +72,10 @@ workbox.routing.registerRoute(
       new workbox.cacheableResponse.Plugin({
         statuses: [0, 200],
       }),
-      ONE_WEEK_EXPIRE
+      ONE_WEEK_EXPIRE,
     ],
   }),
 );
 
+// eslint-disable-next-line no-restricted-globals, no-underscore-dangle
 workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
