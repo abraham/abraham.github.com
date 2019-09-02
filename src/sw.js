@@ -5,18 +5,19 @@ const ONE_WEEK_EXPIRE = new workbox.expiration.Plugin({
   maxAgeSeconds: 7 * SECONDS_IN_A_DAY,
 });
 
-workbox.skipWaiting();
-workbox.clientsClaim();
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
 
 workbox.precaching.precacheAndRoute([
   { url: '/img/abraham-512.jpg', revision: '8a7bcd688d7d98bfa600ad32794db76345f202e1' },
   { url: '/img/abraham-192.jpg', revision: 'fbad5dd962ecdab56341edb3b7e6cbaa3d0cf313' },
 ]);
+workbox.precaching.cleanupOutdatedCaches();
 
 // Cache the Google Fonts stylesheets
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.googleapis\.com/,
-  workbox.strategies.staleWhileRevalidate({
+  new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'google-fonts-stylesheets',
   }),
 );
@@ -24,7 +25,7 @@ workbox.routing.registerRoute(
 // Cache the Google Fonts webfont files
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.gstatic\.com/,
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'google-fonts-webfonts',
     plugins: [
       new workbox.cacheableResponse.Plugin({
@@ -40,7 +41,7 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
   new RegExp('^https://unpkg.com/(.*).json$'),
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'unpkg',
     plugins: [
       new workbox.cacheableResponse.Plugin({
@@ -53,7 +54,7 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
   new RegExp('^https://api.github.com/(.*)'),
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'github',
     plugins: [
       new workbox.cacheableResponse.Plugin({
@@ -66,7 +67,7 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
   new RegExp('^https://pbs.twimg.com/(.*)'),
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'twitter',
     plugins: [
       new workbox.cacheableResponse.Plugin({
