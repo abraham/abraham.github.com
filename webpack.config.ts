@@ -18,7 +18,7 @@ module.exports = {
   stats: 'none',
   devServer: {
     contentBase: path.resolve(__dirname, 'src'),
-    hot: false
+    hot: false,
   },
   output: {
     crossOriginLoading: 'anonymous',
@@ -33,10 +33,10 @@ module.exports = {
           name: 'style',
           test: /\.css$/,
           chunks: 'all',
-          enforce: true
-        }
-      }
-    }
+          enforce: true,
+        },
+      },
+    },
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: '[name]-[hash].css' }),
@@ -83,7 +83,7 @@ module.exports = {
   ],
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: "ts-loader" },
+      { test: /\.tsx?$/, loader: 'ts-loader' },
       {
         test: /\.css$/,
         use: [
@@ -92,7 +92,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              includePaths: [path.resolve(__dirname, 'node_modules')]
+              includePaths: [path.resolve(__dirname, 'node_modules')],
             },
           },
         ],
