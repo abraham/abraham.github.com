@@ -37,7 +37,7 @@
     "@types/webcomponents.js": "0.6.34",
     "@types/webfontloader": "1.6.29",
     "@types/webpack": "4.41.0",
-    "@types/webpack-dev-server": "3.4.0",
+    "@types/webpack-dev-server": "3.9.0",
     "@types/webpack-subresource-integrity": "1.2.0",
     "@typescript-eslint/eslint-plugin": "2.9.0",
     "@typescript-eslint/parser": "2.9.0",
