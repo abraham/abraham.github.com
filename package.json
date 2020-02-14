@@ -5,14 +5,10 @@
   "private": true,
   "scripts": {
     "clear": "rm -rf public/*",
-    "build": "webpack",
-    "build:prod": "npm run clear && NODE_ENV=production webpack",
+    "build": "npm run clear && NODE_ENV=production webpack",
     "start": "webpack-dev-server",
-    "start:prod": "npm run build:prod && http-server public",
-    "target:staging": "firebase use staging",
-    "target:prod": "firebase use prod",
-    "deploy:staging": "npm run build:prod && npm run target:staging && firebase deploy",
-    "deploy:prod": "npm run build:prod && npm run target:prod && firebase deploy",
+    "start:prod": "npm run build && http-server public",
+    "deploy": "npm run build && firebase deploy",
     "lighthouse": "lighthouse-ci http://localhost:8080/ --performance=95 --pwa=90 --accessibility=90 --best-practice=85 --seo=100",
     "lint": "eslint src *.ts",
     "test": "start-server-and-test start:prod http://localhost:8080 lighthouse"
