@@ -1,26 +1,27 @@
-@import "~@material/chips/mdc-chips";
-@import "~@material/fab/mdc-fab";
+@import '~@material/chips/mdc-chips';
+@import '~@material/fab/mdc-fab';
 
 h2 {
   margin-left: 12px;
 }
 
 .grid-item {
+  border-width: 0;
   margin: 12px;
   width: calc(50% - 24px);
-  border-width: 0;
 }
 
-
 node-package {
-  width: 100%;
   --node-package-background-color: #fff;
   --node-package-color: #000;
   --node-package-link-color: #000;
+
   border-color: #000;
+  width: 100%;
 }
 
-a, .profile-chip i {
+a,
+.profile-chip i {
   color: #000;
 }
 
@@ -29,9 +30,9 @@ header h1 {
 }
 
 .profile-chip {
-  color: #000;
   background-color: #fff;
   border: 1px #000 solid;
+  color: #000;
 }
 
 .grid {
@@ -49,28 +50,28 @@ header h1 {
 }
 
 .description {
-  text-align: justify;
-  margin: 0 12px;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   hyphens: auto;
+  margin: 0 12px;
+  text-align: justify;
 }
 
 .promo {
-  text-align: center;
-  margin: 12px 12px;
   border: 1px solid #000;
   border-radius: 8px;
+  margin: 12px;
+  text-align: center;
 }
 
 .app-fab--absolute {
-  background-color: #1DA1F2;
-  position: fixed;
+  background-color: #1da1f2;
   bottom: 1.5rem;
+  position: fixed;
   right: 1.5rem;
 }
 
 .mdc-fab.mdc-fab--extended {
+  border-radius: 28px;
+  height: 56px;
   width: 179px;
 }
 
@@ -79,50 +80,47 @@ header h1 {
   width: 56px;
 }
 
-.mdc-fab:not(.mdc-fab--extended) {
-  width: 56px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.mdc-fab, .mdc-fab__label {
-  transition: all 200ms ease-in-out;
-}
-
-.mdc-fab .mdc-fab__label {
-  width: 100%;
-}
-.mdc-fab:not(.mdc-fab--extended) .mdc-fab__label {
-  width: 0;
-}
-
-.mdc-fab.mdc-fab--extended {
-  height: 56px;
-  border-radius: 28px;
-}
-
 .mdc-fab {
   font-size: 1rem;
   letter-spacing: 0.08929em;
 }
 
-#maine {
-  max-width: 1280px;
-  padding-top: 48px;
-  margin: 128px auto 0 auto;
-  padding: 12px;
+.mdc-fab,
+.mdc-fab__label {
+  transition: all 200ms ease-in-out;
+}
+
+.mdc-fab:not(.mdc-fab--extended) {
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 56px;
+}
+
+.mdc-fab .mdc-fab__label {
+  width: 100%;
+}
+
+.mdc-fab:not(.mdc-fab--extended) .mdc-fab__label {
+  width: 0;
+}
+
+.maine {
   display: flex;
   flex-direction: column;
+  margin: 128px auto 0;
+  max-width: 1280px;
+  padding: 12px;
+  padding-top: 48px;
 }
 
 @media all and (max-width: 960px) {
-  #maine {
+  .maine {
     max-width: 640px;
   }
 
   .grid-item {
-    width: calc(100%);
     margin: 12px 0;
+    width: calc(100%);
   }
 
   h2 {
@@ -130,7 +128,7 @@ header h1 {
   }
 
   .description {
-    margin: 0 0;
+    margin: 0;
   }
 
   .promo {
