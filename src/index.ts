@@ -1,7 +1,7 @@
 import { MDCChipSet } from '@material/chips/index';
 import { MDCRipple } from '@material/ripple/index';
 import * as WebFont from 'webfontloader';
-import './index.css';
+import './index.scss';
 
 new MDCChipSet(document.querySelector('.mdc-chip-set'));
 new MDCRipple(document.querySelector('.mdc-fab'));

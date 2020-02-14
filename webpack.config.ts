@@ -85,9 +85,9 @@ module.exports = {
     rules: [
       { test: /\.tsx?$/, loader: 'ts-loader' },
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          production ? MiniCssExtractPlugin.loader : 'style-loader',
           'css-loader',
           {
             loader: 'sass-loader',
