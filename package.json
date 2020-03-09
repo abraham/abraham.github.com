@@ -12,7 +12,7 @@
     "lighthouse": "lighthouse-ci http://localhost:8080/ --performance=95 --pwa=90 --accessibility=90 --best-practice=85 --seo=100",
     "lint": "npm run lint:eslint && npm run lint:stylelint",
     "lint:eslint": "eslint src *.ts",
-    "lint:stylelint": "stylelint src/**/*.scss",
+    "lint:stylelint": "stylelint \"src/**/*.scss\"",
     "test": "start-server-and-test start:prod http://localhost:8080 lighthouse"
   },
   "repository": {
