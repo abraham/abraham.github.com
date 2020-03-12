@@ -19,6 +19,7 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, 'src'),
     hot: false,
+    port: 5000,
   },
   output: {
     crossOriginLoading: 'anonymous',
