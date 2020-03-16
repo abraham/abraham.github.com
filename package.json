@@ -73,7 +73,7 @@
     "@material/chips": "5.1.0",
     "@material/fab": "5.1.0",
     "@material/ripple": "5.1.0",
-    "@webcomponents/webcomponentsjs": "2.4.2",
+    "@webcomponents/webcomponentsjs": "2.4.3",
     "github-repository": "0.4.0",
     "node-package": "1.4.0",
     "twitter-status": "0.5.0",
