@@ -26,6 +26,7 @@
           "webpack.config.ts"
         ]
       }
-    ]
+    ],
+    "no-return-assign": 0
   }
 }
