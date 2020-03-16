@@ -10,10 +10,11 @@ import SriPlugin from 'webpack-subresource-integrity';
 import { InjectManifest } from 'workbox-webpack-plugin';
 
 const production = process.env.NODE_ENV === 'production';
+const mode = production ? 'production' : 'development';
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  mode: production ? 'production' : 'development',
+  mode,
   entry: './index.ts',
   stats: 'none',
   devServer: {
@@ -51,8 +52,9 @@ module.exports = {
     new WebpackChunkHash(),
     new ScriptExtHtmlWebpackPlugin({ defaultAttribute: 'async' }),
     new InjectManifest({
-      swSrc: path.resolve(__dirname, 'src', 'sw.js'),
+      swSrc: path.resolve(__dirname, 'src', 'sw.ts'),
       swDest: 'sw.js',
+      mode,
     }),
     new CopyWebpackPlugin([
       {
