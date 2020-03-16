@@ -1,5 +1,4 @@
 @import '~@material/chips/mdc-chips';
-@import '~@material/fab/mdc-fab';
 
 h2 {
   margin-left: 12px;
@@ -62,46 +61,9 @@ header h1 {
   text-align: center;
 }
 
-.app-fab--absolute {
-  background-color: #1da1f2;
-  bottom: 1.5rem;
-  position: fixed;
-  right: 1.5rem;
-}
-
-.mdc-fab.mdc-fab--extended {
-  border-radius: 28px;
-  height: 56px;
-  width: 179px;
-}
-
-.mdc-fab.mdc-fab--extended .mdc-fab__icon {
-  padding-left: 8px;
-  width: 56px;
-}
-
-.mdc-fab {
-  font-size: 1rem;
-  letter-spacing: 0.08929em;
-}
-
-.mdc-fab,
-.mdc-fab__label {
-  transition: all 200ms ease-in-out;
-}
-
-.mdc-fab:not(.mdc-fab--extended) {
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 56px;
-}
-
-.mdc-fab .mdc-fab__label {
-  width: 100%;
-}
-
-.mdc-fab:not(.mdc-fab--extended) .mdc-fab__label {
-  width: 0;
+fab-fab {
+  --background-color: #1da1f2;
+  --color: #fff;
 }
 
 .maine {
