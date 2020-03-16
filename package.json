@@ -11,7 +11,7 @@
     "deploy": "npm run build && firebase deploy",
     "lighthouse": "lighthouse-ci http://localhost:5000/ --performance=95 --pwa=90 --accessibility=90 --best-practice=85 --seo=100",
     "lint": "npm run lint:eslint && npm run lint:stylelint",
-    "lint:eslint": "eslint src *.ts",
+    "lint:eslint": "eslint . --ext .ts",
     "lint:stylelint": "stylelint \"src/**/*.scss\"",
     "test": "npm run build && firebase emulators:exec \"npm run lighthouse\""
   },
@@ -71,9 +71,11 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "dependencies": {
+    "@material/chips": "5.1.0",
+    "@material/fab": "5.1.0",
+    "@material/ripple": "5.1.0",
     "@webcomponents/webcomponentsjs": "2.4.2",
     "github-repository": "0.4.0",
-    "material-components-web": "5.1.0",
     "node-package": "1.4.0",
     "twitter-status": "0.5.0",
     "webfontloader": "1.6.28"
