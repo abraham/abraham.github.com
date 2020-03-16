@@ -1,37 +1,30 @@
-import { MDCChipSet } from '@material/chips/index';
-import { MDCRipple } from '@material/ripple/index';
+import { MDCChipSet } from '@material/chips';
+import { MDCRipple } from '@material/ripple';
 import * as WebFont from 'webfontloader';
 import './index.scss';
 
-new MDCChipSet(document.querySelector('.mdc-chip-set'));
-new MDCRipple(document.querySelector('.mdc-fab'));
+MDCChipSet.attachTo(document.querySelector('.mdc-chip-set'));
+MDCRipple.attachTo(document.querySelector('.mdc-fab'));
 document.querySelector('.mdc-fab').classList.remove('mdc-fab--exited');
-
-importPollyfill()
-  .then(importComponents)
-  .then(registerSW)
-  .catch(error => console.log(`Error importing dependancies or registering Service Worker: ${error}`));
 
 WebFont.load({
   google: {
     families: ['Roboto', 'Material Icons'],
-   }
+  },
 });
 
 function registerSW(): Promise<ServiceWorkerRegistration|void> {
   if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
     return navigator.serviceWorker.register('/sw.js');
-  } else {
-    return Promise.resolve();
   }
+  return Promise.resolve();
 }
 
 function importPollyfill(): Promise<void> {
   if ('customElements' in window && 'attachShadow' in document.head) {
     return Promise.resolve();
-  } else {
-    return import(/* webpackChunkName: 'polyfill' */ '@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce');
   }
+  return import(/* webpackChunkName: 'polyfill' */ '@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce');
 }
 
 function importComponents(): Promise<any[]> {
@@ -50,21 +43,31 @@ function extendFab(extended: boolean) {
   }
 }
 
-let last_known_scroll_position = 0;
+let lastKnownScrollPosition = 0;
 let extended = true;
 let ticking = false;
 let scrolled = false;
+const animationFrame = () => {
+  extendFab(extended);
+  ticking = false;
+};
 
-window.addEventListener('scroll', function() {
+const onScroll = () => {
   const top = window.scrollY < 50;
+
   if (!ticking && scrolled && (extended || top)) {
-    extended = window.scrollY < last_known_scroll_position;
-    last_known_scroll_position = window.scrollY;
-    window.requestAnimationFrame(function() {
-      extendFab(extended);
-      ticking = false;
-    });
+    extended = window.scrollY < lastKnownScrollPosition;
+    lastKnownScrollPosition = window.scrollY;
+    window.requestAnimationFrame(animationFrame);
     ticking = true;
   }
+
   scrolled = true;
-});
+};
+
+window.addEventListener('scroll', onScroll);
+
+importPollyfill()
+  .then(importComponents)
+  .then(registerSW)
+  .catch((error: Error) => console.log(`Error importing dependancies or registering Service Worker: ${error}`));
