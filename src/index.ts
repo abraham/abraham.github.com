@@ -31,7 +31,7 @@ function importComponents(): Promise<any[]> {
   return Promise.all([
     import(/* webpackChunkName: 'components' */ 'node-package'),
     import(/* webpackChunkName: 'components' */ 'github-repository'),
-    // import(/* webpackChunkName: 'components' */ 'twitter-status'),
+    import(/* webpackChunkName: 'components' */ 'twitter-status'),
   ]);
 }
 
@@ -67,7 +67,32 @@ const onScroll = () => {
 
 window.addEventListener('scroll', onScroll);
 
+// TODO: Upstream to twitter-status
+declare global {
+  interface HTMLElementTagNameMap {
+    'twitter-status': import('twitter-status').TwitterStatus;
+  }
+}
+
 importPollyfill()
   .then(importComponents)
   .then(registerSW)
   .catch((error: Error) => console.log(`Error importing dependancies or registering Service Worker: ${error}`));
+
+const renderStatus = (status: import('twitter-d').Status) => {
+  const container = document.querySelector('.tweets');
+  const item = document.createElement('div');
+  item.classList.add('grid-item');
+  const twitterStatus: import('twitter-status').TwitterStatus = document.createElement('twitter-status');
+  twitterStatus.status = status;
+  item.appendChild(twitterStatus);
+  container.appendChild(item);
+};
+
+import('../tweets.json').then(({ default: statuses }: { default: unknown[] }) => {
+  const container = document.querySelector('.tweets');
+  container.innerHTML = '';
+  statuses.forEach(renderStatus);
+}).catch(() => {
+  document.querySelector('.tweets').innerHTML = '<div class="grid-item">Error loading tweets.</div>';
+});
