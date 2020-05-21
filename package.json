@@ -34,7 +34,7 @@
     "@types/mini-css-extract-plugin": "0.9.1",
     "@types/node": "10.12.23",
     "@types/webcomponents.js": "0.6.35",
-    "@types/webfontloader": "1.6.30",
+    "@types/webfontloader": "1.6.31",
     "@types/webpack": "4.41.13",
     "@types/webpack-dev-server": "3.10.1",
     "@types/webpack-subresource-integrity": "1.2.0",
