@@ -43,7 +43,7 @@
     "copy-webpack-plugin": "5.1.1",
     "css-loader": "3.5.3",
     "eslint": "7.2.0",
-    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-config-airbnb-base": "14.2.0",
     "eslint-plugin-import": "2.21.2",
     "firebase-tools": "8.4.2",
     "html-webpack-inline-source-plugin": "0.0.10",
