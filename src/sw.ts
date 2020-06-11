@@ -10,7 +10,6 @@ const ONE_WEEK_EXPIRE = new ExpirationPlugin({
   maxAgeSeconds: 7 * SECONDS_IN_A_DAY,
 });
 
-
 skipWaiting();
 clientsClaim();
 
