@@ -35,7 +35,7 @@
     "@types/node": "10.12.23",
     "@types/webcomponents.js": "0.6.35",
     "@types/webfontloader": "1.6.32",
-    "@types/webpack": "4.41.18",
+    "@types/webpack": "4.41.19",
     "@types/webpack-dev-server": "3.11.0",
     "@types/webpack-subresource-integrity": "1.2.0",
     "@typescript-eslint/eslint-plugin": "3.5.0",
