@@ -42,7 +42,7 @@
     "@typescript-eslint/parser": "3.7.1",
     "copy-webpack-plugin": "5.1.1",
     "css-loader": "4.2.0",
-    "eslint": "7.5.0",
+    "eslint": "7.6.0",
     "eslint-config-airbnb-base": "14.2.0",
     "eslint-plugin-import": "2.22.0",
     "firebase-tools": "8.6.0",
