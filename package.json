@@ -28,7 +28,7 @@
   },
   "homepage": "https://abrah.am",
   "devDependencies": {
-    "@types/copy-webpack-plugin": "5.0.1",
+    "@types/copy-webpack-plugin": "6.0.0",
     "@types/html-webpack-plugin": "3.2.3",
     "@types/material-components-web": "0.43.1",
     "@types/mini-css-extract-plugin": "0.9.1",
@@ -40,7 +40,7 @@
     "@types/webpack-subresource-integrity": "1.2.0",
     "@typescript-eslint/eslint-plugin": "3.10.0",
     "@typescript-eslint/parser": "3.10.0",
-    "copy-webpack-plugin": "5.1.1",
+    "copy-webpack-plugin": "6.0.3",
     "css-loader": "4.2.2",
     "eslint": "7.7.0",
     "eslint-config-airbnb-base": "14.2.0",
