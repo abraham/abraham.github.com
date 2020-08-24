@@ -28,7 +28,7 @@
   },
   "homepage": "https://abrah.am",
   "devDependencies": {
-    "@types/copy-webpack-plugin": "5.0.1",
+    "@types/copy-webpack-plugin": "6.0.0",
     "@types/html-webpack-plugin": "3.2.3",
     "@types/material-components-web": "0.43.1",
     "@types/mini-css-extract-plugin": "0.9.1",
