@@ -2,6 +2,7 @@ name: Main
 on: push
 env:
   FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+  LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -27,3 +28,16 @@ jobs:
       - uses: actions/checkout@v2
       - run: npm ci
       - run: npm run lint
+
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm ci
+      - run: npx firebase use abraham-d3850
+      - uses: treosh/lighthouse-ci-action@v2
+        with:
+          urls: http://localhost:5000/
+          configPath: ./lighthouserc.json
+          temporaryPublicStorage: true
