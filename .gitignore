@@ -2,6 +2,7 @@
 .firebase
 .firebaserc
 firebase-debug.log
+firestore-debug.log
 node_modules
 public
 .env
