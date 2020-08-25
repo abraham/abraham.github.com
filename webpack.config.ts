@@ -56,28 +56,30 @@ module.exports = {
       swDest: 'sw.js',
       mode,
     }),
-    new CopyWebpackPlugin([
-      {
-        from: '*.txt',
-        to: '.',
-      },
-      {
-        from: '*.ico',
-        to: '.',
-      },
-      {
-        from: '*.png',
-        to: '.',
-      },
-      {
-        from: 'img/*',
-        to: '.',
-      },
-      {
-        from: '*.json',
-        to: '.',
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: '*.txt',
+          to: '.',
+        },
+        {
+          from: '*.ico',
+          to: '.',
+        },
+        {
+          from: '*.png',
+          to: '.',
+        },
+        {
+          from: 'img/*',
+          to: '.',
+        },
+        {
+          from: '*.json',
+          to: '.',
+        },
+      ],
+    }),
     new SriPlugin({
       hashFuncNames: ['sha256', 'sha384', 'sha512'],
       enabled: production,
