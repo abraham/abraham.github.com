@@ -7,13 +7,13 @@
     "build": "npm run clear && NODE_ENV=production webpack",
     "clear": "rm -rf public/*",
     "deploy": "npm run build && firebase deploy",
+    "get-tweets": "ts-node scripts/get-tweets.ts",
     "lighthouse": "lighthouse-ci http://localhost:5000/ --performance=85 --pwa=85 --accessibility=95 --best-practice=100 --seo=100",
     "lint:eslint": "eslint . --ext .ts",
     "lint:stylelint": "stylelint \"src/**/*.scss\"",
     "lint": "npm run lint:eslint && npm run lint:stylelint",
     "start:prod": "npm run build && firebase serve",
     "start": "webpack-dev-server",
-    "get-tweets": "ts-node scripts/get-tweets.ts",
     "test": "npm run build && firebase emulators:exec \"npm run lighthouse\""
   },
   "repository": {
