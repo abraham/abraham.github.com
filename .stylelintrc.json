@@ -1,12 +1,6 @@
 {
-  "extends": [
-    "stylelint-config-standard",
-    "stylelint-config-sass-guidelines"
-  ],
-  "plugins": [
-    "stylelint-scss",
-    "stylelint-selector-bem-pattern"
-  ],
+  "extends": ["stylelint-config-standard", "stylelint-config-sass-guidelines"],
+  "plugins": ["stylelint-scss", "stylelint-selector-bem-pattern"],
   "rules": {
     "selector-class-pattern": null,
     "plugin/selector-bem-pattern": {
@@ -15,9 +9,7 @@
     "selector-type-no-unknown": [
       true,
       {
-        "ignore": [
-          "custom-elements"
-        ]
+        "ignore": ["custom-elements"]
       }
     ]
   }

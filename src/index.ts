@@ -1,3 +1,5 @@
+/* global process */
+
 import { MDCChipSet } from '@material/chips';
 import { MDCRipple } from '@material/ripple';
 import * as WebFont from 'webfontloader';
@@ -13,7 +15,7 @@ WebFont.load({
   },
 });
 
-function registerSW(): Promise<ServiceWorkerRegistration|void> {
+function registerSW(): Promise<ServiceWorkerRegistration | void> {
   if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
     return navigator.serviceWorker.register('/sw.js');
   }
@@ -24,7 +26,9 @@ function importPollyfill(): Promise<void> {
   if ('customElements' in window && 'attachShadow' in document.head) {
     return Promise.resolve();
   }
-  return import(/* webpackChunkName: 'polyfill' */ '@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce');
+  return import(
+    /* webpackChunkName: 'polyfill' */ '@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce'
+  );
 }
 
 function importComponents(): Promise<any[]> {
@@ -77,22 +81,31 @@ declare global {
 importPollyfill()
   .then(importComponents)
   .then(registerSW)
-  .catch((error: Error) => console.log(`Error importing dependancies or registering Service Worker: ${error}`));
+  .catch((error: Error) =>
+    console.log(
+      `Error importing dependancies or registering Service Worker: ${error}`,
+    ),
+  );
 
 const renderStatus = (status: import('twitter-d').Status) => {
   const container = document.querySelector('.tweets');
   const item = document.createElement('div');
   item.classList.add('grid-item');
-  const twitterStatus: import('twitter-status').TwitterStatus = document.createElement('twitter-status');
+  const twitterStatus: import('twitter-status').TwitterStatus = document.createElement(
+    'twitter-status',
+  );
   twitterStatus.status = status;
   item.appendChild(twitterStatus);
   container.appendChild(item);
 };
 
-import('../tweets.json').then(({ default: statuses }: { default: unknown[] }) => {
-  const container = document.querySelector('.tweets');
-  container.innerHTML = '';
-  statuses.forEach(renderStatus);
-}).catch(() => {
-  document.querySelector('.tweets').innerHTML = '<div class="grid-item">Error loading tweets.</div>';
-});
+import('../tweets.json')
+  .then(({ default: statuses }: { default: unknown[] }) => {
+    const container = document.querySelector('.tweets');
+    container.innerHTML = '';
+    statuses.forEach(renderStatus);
+  })
+  .catch(() => {
+    document.querySelector('.tweets').innerHTML =
+      '<div class="grid-item">Error loading tweets.</div>';
+  });
