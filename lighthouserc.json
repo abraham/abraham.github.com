@@ -1,0 +1,19 @@
+{
+  "ci": {
+    "collect": {
+      "isSinglePageApplication": true,
+      "numberOfRuns": 3,
+      "staticDistDir": "./public/",
+      "startServerCommand": "npm run start:prod",
+      "url": [
+        "http://localhost:5000/"
+      ]
+    },
+    "assert": {
+      "preset": "lighthouse:recommended"
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
