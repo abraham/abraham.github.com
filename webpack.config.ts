@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackInlineSourcePlugin from 'html-webpack-inline-source-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';

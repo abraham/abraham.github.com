@@ -6,11 +6,7 @@
   "hosting": {
     "public": "public",
     "trailingSlash": true,
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "redirects": [
       {
         "source": "/+",
@@ -35,18 +31,22 @@
     ],
     "headers": [
       {
-        "source" : "@(vendors|style|main|precache)*.js",
-        "headers" : [{
-          "key" : "Cache-Control",
-          "value" : "max-age=604800"
-        }]
+        "source": "@(vendors|style|main|precache)*.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
+        ]
       },
       {
-        "source" : "/img/*.jpg",
-        "headers" : [{
-          "key" : "Cache-Control",
-          "value" : "max-age=604800"
-        }]
+        "source": "/img/*.jpg",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
+        ]
       },
       /*{
         "source": "*.html",
@@ -106,7 +106,7 @@
         "source": "/sw.js",
         "headers": [
           {
-            "key" : "Cache-Control",
+            "key": "Cache-Control",
             "value": "no-cache"
           }
         ]
@@ -115,7 +115,7 @@
         "source": "/index.html",
         "headers": [
           {
-            "key" : "Cache-Control",
+            "key": "Cache-Control",
             "value": "no-cache"
           }
         ]
