@@ -48,7 +48,7 @@ module.exports = {
       inlineSource: '.(css)$',
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
-    new HtmlWebpackInlineSourcePlugin(),
+    new (HtmlWebpackInlineSourcePlugin as any)(HtmlWebpackPlugin),
     new WebpackChunkHash(),
     new ScriptExtHtmlWebpackPlugin({ defaultAttribute: 'async' }),
     new InjectManifest({
