@@ -1,8 +1,21 @@
 {
   "name": "abrah-am",
   "version": "1.0.0",
-  "description": "Source for https://abrah.am",
   "private": true,
+  "description": "Source for https://abrah.am",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abraham/abrah.am.git"
+  },
+  "author": "Abraham Williams <abraham@abrah.am>",
+  "homepage": "https://abrah.am",
+  "bugs": {
+    "url": "https://github.com/abraham/abrah.am/issues"
+  },
+  "engines": {
+    "node": "12"
+  },
   "scripts": {
     "build": "npm run clear && NODE_ENV=production webpack",
     "clear": "rm -rf public/*",
@@ -10,25 +23,32 @@
     "fix": "prettier --write .",
     "get-tweets": "ts-node scripts/get-tweets.ts",
     "lighthouse": "lighthouse-ci http://localhost:5000/ --performance=70 --pwa=85 --accessibility=95 --best-practice=100 --seo=100",
+    "lint": "concurrently npm:lint:*",
     "lint:eslint": "eslint . --ext .ts",
     "lint:prettier": "prettier --check .",
     "lint:stylelint": "stylelint \"src/**/*.scss\"",
-    "lint": "concurrently npm:lint:*",
-    "start:prod": "npm run build && firebase emulators:start",
     "start": "firebase emulators:exec \"webpack --watch\"",
+    "start:prod": "npm run build && firebase emulators:start",
     "test": "npm run build && firebase emulators:exec \"npm run lighthouse\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/abraham/abrah.am.git"
-  },
   "keywords": [],
-  "author": "Abraham Williams <abraham@abrah.am>",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/abraham/abrah.am/issues"
+  "dependencies": {
+    "@material/chips": "7.0.0",
+    "@material/fab": "7.0.0",
+    "@material/ripple": "7.0.0",
+    "@webcomponents/webcomponentsjs": "2.4.4",
+    "github-repository": "0.4.0",
+    "node-package": "1.4.0",
+    "twit": "2.2.11",
+    "twitter-status": "0.5.0",
+    "webfontloader": "1.6.28",
+    "workbox-cacheable-response": "5.1.4",
+    "workbox-core": "5.1.4",
+    "workbox-expiration": "5.1.4",
+    "workbox-precaching": "5.1.4",
+    "workbox-routing": "5.1.4",
+    "workbox-strategies": "5.1.4"
   },
-  "homepage": "https://abrah.am",
   "devDependencies": {
     "@types/copy-webpack-plugin": "6.0.0",
     "@types/html-webpack-plugin": "3.2.3",
@@ -53,6 +73,7 @@
     "lighthouse-ci": "1.10.4",
     "mini-css-extract-plugin": "0.11.2",
     "prettier": "2.1.2",
+    "prettier-plugin-package": "1.1.0",
     "sass": "1.26.11",
     "sass-loader": "10.0.2",
     "script-ext-html-webpack-plugin": "2.1.4",
@@ -71,25 +92,5 @@
     "webpack-stylish": "0.1.8",
     "webpack-subresource-integrity": "1.4.1",
     "workbox-webpack-plugin": "5.1.4"
-  },
-  "dependencies": {
-    "@material/chips": "7.0.0",
-    "@material/fab": "7.0.0",
-    "@material/ripple": "7.0.0",
-    "@webcomponents/webcomponentsjs": "2.4.4",
-    "github-repository": "0.4.0",
-    "node-package": "1.4.0",
-    "twit": "2.2.11",
-    "twitter-status": "0.5.0",
-    "webfontloader": "1.6.28",
-    "workbox-cacheable-response": "5.1.4",
-    "workbox-core": "5.1.4",
-    "workbox-expiration": "5.1.4",
-    "workbox-precaching": "5.1.4",
-    "workbox-routing": "5.1.4",
-    "workbox-strategies": "5.1.4"
-  },
-  "engines": {
-    "node": "12"
   }
 }
