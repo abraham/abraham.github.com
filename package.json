@@ -36,7 +36,7 @@
     "@material/chips": "7.0.0",
     "@material/fab": "7.0.0",
     "@material/ripple": "7.0.0",
-    "@webcomponents/webcomponentsjs": "2.4.4",
+    "@webcomponents/webcomponentsjs": "2.5.0",
     "github-repository": "0.4.0",
     "node-package": "1.4.0",
     "twit": "2.2.11",
