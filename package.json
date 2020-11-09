@@ -33,9 +33,9 @@
   },
   "keywords": [],
   "dependencies": {
-    "@material/chips": "7.0.0",
-    "@material/fab": "7.0.0",
-    "@material/ripple": "7.0.0",
+    "@material/chips": "8.0.0",
+    "@material/fab": "8.0.0",
+    "@material/ripple": "8.0.0",
     "@webcomponents/webcomponentsjs": "2.5.0",
     "github-repository": "0.4.0",
     "node-package": "1.4.0",
