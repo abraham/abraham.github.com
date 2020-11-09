@@ -26,9 +26,7 @@ function importPollyfill(): Promise<void> {
   if ('customElements' in window && 'attachShadow' in document.head) {
     return Promise.resolve();
   }
-  return import(
-    /* webpackChunkName: 'polyfill' */ '@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce'
-  );
+  return import(/* webpackChunkName: 'polyfill' */ '@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce');
 }
 
 function importComponents(): Promise<any[]> {
@@ -81,19 +79,13 @@ declare global {
 importPollyfill()
   .then(importComponents)
   .then(registerSW)
-  .catch((error: Error) =>
-    console.log(
-      `Error importing dependancies or registering Service Worker: ${error}`,
-    ),
-  );
+  .catch((error: Error) => console.log(`Error importing dependancies or registering Service Worker: ${error}`));
 
 const renderStatus = (status: import('twitter-d').Status) => {
   const container = document.querySelector('.tweets');
   const item = document.createElement('div');
   item.classList.add('grid-item');
-  const twitterStatus: import('twitter-status').TwitterStatus = document.createElement(
-    'twitter-status',
-  );
+  const twitterStatus: import('twitter-status').TwitterStatus = document.createElement('twitter-status');
   twitterStatus.status = status;
   item.appendChild(twitterStatus);
   container.appendChild(item);
@@ -106,6 +98,5 @@ import('../tweets.json')
     statuses.forEach(renderStatus);
   })
   .catch(() => {
-    document.querySelector('.tweets').innerHTML =
-      '<div class="grid-item">Error loading tweets.</div>';
+    document.querySelector('.tweets').innerHTML = '<div class="grid-item">Error loading tweets.</div>';
   });
