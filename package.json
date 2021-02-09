@@ -33,7 +33,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "@material/chips": "9.0.0",
+    "@material/chips": "10.0.0",
     "@material/fab": "10.0.0",
     "@material/ripple": "10.0.0",
     "@webcomponents/webcomponentsjs": "2.5.0",
