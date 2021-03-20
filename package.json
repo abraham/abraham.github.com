@@ -14,7 +14,7 @@
     "url": "https://github.com/abraham/abrah.am/issues"
   },
   "engines": {
-    "node": "12"
+    "node": "14"
   },
   "scripts": {
     "build": "npm run clear && NODE_ENV=production webpack",
