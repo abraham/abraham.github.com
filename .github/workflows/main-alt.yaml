@@ -1,0 +1,29 @@
+name: Main alt
+on: pull_request_target
+env:
+  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+      - run: npx firebase use abraham-d3850
+      - run: npm run test
+
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+      - run: npm run build
+
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+      - run: npm run lint
