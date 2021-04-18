@@ -64,7 +64,7 @@
     "concurrently": "^6.0.2",
     "copy-webpack-plugin": "6.4.1",
     "css-loader": "5.2.0",
-    "eslint": "7.23.0",
+    "eslint": "7.24.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
     "firebase-tools": "9.9.0",
