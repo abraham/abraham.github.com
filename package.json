@@ -47,7 +47,7 @@
     "workbox-expiration": "6.1.5",
     "workbox-precaching": "6.1.2",
     "workbox-routing": "6.1.5",
-    "workbox-strategies": "6.1.2"
+    "workbox-strategies": "6.1.5"
   },
   "devDependencies": {
     "@types/copy-webpack-plugin": "6.4.1",
