@@ -42,7 +42,7 @@
     "twit": "2.2.11",
     "twitter-status": "0.5.0",
     "webfontloader": "1.6.28",
-    "workbox-cacheable-response": "6.1.2",
+    "workbox-cacheable-response": "6.1.5",
     "workbox-core": "6.1.2",
     "workbox-expiration": "6.1.5",
     "workbox-precaching": "6.1.2",
