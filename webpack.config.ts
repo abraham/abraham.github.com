@@ -1,7 +1,6 @@
 /* eslint-env node */
 
 import CopyWebpackPlugin from 'copy-webpack-plugin';
-import HtmlWebpackInlineSourcePlugin from 'html-webpack-inline-source-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
@@ -47,7 +46,6 @@ module.exports = {
       inlineSource: '.(css)$',
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
-    new (HtmlWebpackInlineSourcePlugin as any)(HtmlWebpackPlugin),
     new WebpackChunkHash(),
     new ScriptExtHtmlWebpackPlugin({ defaultAttribute: 'async' }),
     new InjectManifest({
