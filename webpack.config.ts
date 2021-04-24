@@ -5,7 +5,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
 import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
-import WebpackChunkHash from 'webpack-chunk-hash';
 import { InjectManifest } from 'workbox-webpack-plugin';
 
 const production = process.env.NODE_ENV === 'production';
@@ -46,7 +45,6 @@ module.exports = {
       inlineSource: '.(css)$',
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
-    new WebpackChunkHash(),
     new ScriptExtHtmlWebpackPlugin({ defaultAttribute: 'async' }),
     new InjectManifest({
       swSrc: path.resolve(__dirname, 'src', 'sw.ts'),
