@@ -4,7 +4,6 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
-import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 import { InjectManifest } from 'workbox-webpack-plugin';
 
 const production = process.env.NODE_ENV === 'production';
@@ -45,7 +44,6 @@ module.exports = {
       inlineSource: '.(css)$',
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
-    new ScriptExtHtmlWebpackPlugin({ defaultAttribute: 'async' }),
     new InjectManifest({
       swSrc: path.resolve(__dirname, 'src', 'sw.ts'),
       swDest: 'sw.js',
