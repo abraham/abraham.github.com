@@ -1,6 +1,6 @@
 /* global process */
 
-import { MDCChipSet } from '@material/chips';
+import { MDCChipSet } from '@material/chips/chip-set';
 import { MDCRipple } from '@material/ripple';
 import * as WebFont from 'webfontloader';
 import './index.scss';
