@@ -20,8 +20,8 @@ module.exports = {
   },
   output: {
     crossOriginLoading: 'anonymous',
-    chunkFilename: '[name]-[hash].js',
-    filename: '[name]-[hash].js',
+    chunkFilename: '[name]-[contenthash].js',
+    filename: '[name]-[contenthash].js',
     path: path.resolve(__dirname, 'public'),
   },
   optimization: {
@@ -37,7 +37,7 @@ module.exports = {
     },
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: '[name]-[hash].css' }),
+    new MiniCssExtractPlugin({ filename: '[name]-[contenthash].css' }),
     new HtmlWebpackPlugin({
       excludeAssets: [/style-.*\.js/],
       filename: 'index.html',
@@ -47,7 +47,6 @@ module.exports = {
     new InjectManifest({
       swSrc: path.resolve(__dirname, 'src', 'sw.ts'),
       swDest: 'sw.js',
-      mode,
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -77,6 +76,17 @@ module.exports = {
   module: {
     rules: [
       { test: /\.tsx?$/, loader: 'ts-loader' },
+      /* Support Workbox using async/await */
+      {
+        test: /\.m?js$/,
+        include: /node_modules\/workbox-/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
       {
         test: /\.s[ac]ss$/i,
         use: [
