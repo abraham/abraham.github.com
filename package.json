@@ -35,7 +35,7 @@
   "keywords": [],
   "dependencies": {
     "@babel/runtime": "7.13.17",
-    "@material/chips": "10.0.0",
+    "@material/chips": "11.0.0",
     "@material/fab": "10.0.0",
     "@material/ripple": "11.0.0",
     "@webcomponents/webcomponentsjs": "2.5.0",
