@@ -7,7 +7,6 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
 import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 import WebpackChunkHash from 'webpack-chunk-hash';
-import Stylish from 'webpack-stylish';
 import SriPlugin from 'webpack-subresource-integrity';
 import { InjectManifest } from 'workbox-webpack-plugin';
 
@@ -18,7 +17,6 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode,
   entry: './index.ts',
-  stats: 'none',
   devServer: {
     contentBase: path.resolve(__dirname, 'src'),
     hot: false,
@@ -86,7 +84,6 @@ module.exports = {
       hashFuncNames: ['sha256', 'sha384', 'sha512'],
       enabled: production,
     }),
-    new Stylish(),
   ],
   module: {
     rules: [
