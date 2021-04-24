@@ -71,6 +71,7 @@ window.addEventListener('scroll', onScroll);
 
 // TODO: Upstream to twitter-status
 declare global {
+  // eslint-disable-next-line no-unused-vars
   interface HTMLElementTagNameMap {
     'twitter-status': import('twitter-status').TwitterStatus;
   }
